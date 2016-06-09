@@ -1,17 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <title>Group Project 1</title>
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-    <h1>Authors:</h1>
-    <h4>Derrick Suarez</h4>
-    <h4>Jimmie Jackson</h4>
-    <h4>Ben Arteaga</h4>
-    <h4>Royce Ching</h4>
-    <footer>&copy; Derrick Suarez, Jimmie Jackson, Ben Arteaga, Royce Ching 2016</footer>
+    <!-- Hamburger Menu -->
+    <header>
+        <button class="hamburger">&#9776;</button>
+        <button class="cross">&#735;</button>
+    </header>
+    <div class="menu">
+        <ul>
+            <a href="#">
+                <li>Basketball</li>
+            </a>
+            <a href="#">
+                <li>Soccer</li>
+            </a>
+            <a href="#">
+                <li>Flag Football</li>
+            </a>
+            <a href="#">
+                <li>Tennis</li>
+            </a>
+            <a href="#">
+                <li>Disc Golf</li>
+            </a>
+        </ul>
+    </div>
+    <!-- Main Text -->
+    <div id="homeTextContainer">
+        <h1 id="homeTitle">pickup</h1>
+        <h4 id="homeTagline">no scrubs allowed</h4>
+        <!-- Buttons -->
+        <button class="button createGameBtn" type="button">Create A Game</button>
+        <button class="button findGameBtn" type="button">Find A Game</button>
+    </div>
+    <!-- Sticky Footer -->
+    <div class="footer">&copy; 2016 Derrick Suarez, Jimmie Jackson, Ben Arteaga, Royce Ching </div>
+    <!--  Latest compiled and minified jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/hamburger.js"></script>
+    <!-- Firebase Reference -->
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
 </body>
 
 </html>
