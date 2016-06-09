@@ -47,8 +47,7 @@ $("#addPickupGame").on("click", function(){
 		state: pickupState,
 		zip: pickupZip,
 		date: pickupDate,
-		time: pickupTime,
-		//freq: pickupFreq
+		time: pickupTime
 	}
 
 	// Uploads pickup data to the database
@@ -85,11 +84,11 @@ pickupData.on("child_added", function(childSnapshot, prevChildKey){
 	console.log(childSnapshot.val());
 
 	// Store everything into a variable.
-	var pickupTitle = childSnapshot.val().;
+	var pickupTitle = childSnapshot.val().title;
 	var pickupSport = childSnapshot.val().sport;
 	//var pickupLoc = $("#LocInput").val().trim();
 	var pickupFacility = childSnapshot.val().facility;
-	var pickupCity = childSnapshot.val().city;;
+	var pickupCity = childSnapshot.val().city;
 	var pickupState = childSnapshot.val().state;
 	var pickupZip = childSnapshot.val().zip;
 	var pickupDate = childSnapshot.val().date;
@@ -114,10 +113,10 @@ pickupData.on("child_added", function(childSnapshot, prevChildKey){
 	console.log(pickupBilled);
 
 	// Calculate the time when Next pickup Arrives
-	var pickupNextArr
+	var pickupNextArr;
 
 	// Calculate the time remaining until Next pickup Arrives
-	var pickupMinsAway
+	var pickupMinsAway;
 
 	// Add each pickup's data into the table
 	//$("#pickupTable > tbody").append("<tr><td>" + pickupTitle + "</td><td>" + pickupLoc + "</td><td>" + pickupTimePretty + "</td><td>" + pickupMonths + "</td><td>" + pickupFreq + "</td><td>");
