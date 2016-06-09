@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Train Schedule</title>
+    <!-- FIREBASE -->
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+    <!-- RESET.CSS -->
+    <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="page-wrap">
+        <div class="container">
+            <!-- Jumbotron -->
+            <div class="jumbotron">
+                <h1 class="text-center">PickUp</h1>
+            </div>
+            <div class="row">
+                <!-- Most Recent Member Panel -->
+                <div class="col-lg-9">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">PickUps Available:</h3>
+                        </div>
+                        <table class="table" id="pickup-data-table">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Sport</th>
+                                    <th>Facility</th>
+                                    <th>City</th>
+                                    <th>State</th>
+                                    <th>Zip</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-data"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Sign-Up Panel-->
+                <div class="col-lg-3">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Add New Train:</h3>
+                        </div>
+                        <div class="panel-body">
+                            <!-- Sign-up Form (note the various input "types")-->
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="name">Title</label>
+                                    <input type="text" class="form-control" id="name-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Sport</label>
+                                    <input type="text" class="form-control" id="name-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Facility</label>
+                                    <input type="text" class="form-control" id="name-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">City</label>
+                                    <input type="text" class="form-control" id="name-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">State</label>
+                                    <input type="text" class="form-control" id="name-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Zip</label>
+                                    <input type="text" class="form-control" id="name-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Date</label>
+                                    <input type="text" class="form-control" id="name-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Time</label>
+                                    <input type="text" class="form-control" id="name-input">
+                                </div>
+                                <button type="submit" class="btn btn-primary" id="add-train">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <h4 class="footer-text text-center">&copy; Derrick Suarez 2016</h4>
+    </footer>
+</body>
+<!-- JQUERY -->
+<script src="http://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+<!-- MOMENT JS -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+<!-- PERSONAL JS -->
+<!-- <script src="assets/js/test.js"></script> -->
+
+</html>
