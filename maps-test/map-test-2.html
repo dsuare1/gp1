@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create a game</title>
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Search for a location for your &copy;PickUp Game:</h3>
+                    <p>(i.e. 'Disc Golf Courses' or 'Soccer Fields')</p>
+                </div>
+                <div class="panel-body">
+                    <!-- <form role="form">
+                        <div class="form-group">
+                            <label for="location">Location search:</label>
+                            <input type="text" class="form-control" id="location-search-input">
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="location-search-button">Submit</button>
+                    </form> -->
+                    <button class="btn btn-default sport-search" id="basketball">Basketball</button>
+                    <button class="btn btn-default sport-search" id="soccer">Soccer</button>
+                    <button class="btn btn-default sport-search" id="disc-golf">Disc Golf</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9">
+        	<div id="map-holder">
+        		<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=10&center=30.2672%2C-97.7431&key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo"></iframe>
+        	</div>
+        </div>
+    </div>
+    	<div class="text-center">
+    		<h2>Current Weather conditions for Austin, TX:</h2>
+    			<div class="weather-data">Overall Weather:
+    				<div id="weather"></div>
+    			</div>
+    			<div class="weather-data">Current Temperature:
+    				<div id="temp"></div>
+    			</div>
+    			<div class="weather-data">Feels like:
+    				<div id="feels-like"></div>
+    			</div>
+    			<div class="weather-data">Heat index:
+    				<div id="heat-index"></div>
+    			</div>
+    			<div class="weather-data">Visit the URL below for a full weather forecast!
+    				<div id="forecast-url"></div>
+    			</div>
+    	</div>
+    <script src="maptest.js"></script>
+    <script src="../assets/js/weatherAPI.js"></script>
+</body>
+
+</html>
