@@ -14,10 +14,13 @@ body {
 
 #homeTextContainer {
     text-align: center;
-    position: relative;
-    top: 50%;
-    transform: translateY(50%);
-    
+    position: fixed;
+    top: 20%;
+    left:35%;
+    background: rgba(255, 255, 255, 0.5);
+
+    /*transform: translateY(50%);*/
+
 }
 
 #homeTitle {
