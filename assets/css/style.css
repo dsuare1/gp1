@@ -1,0 +1,194 @@
+/*Body Styling*/
+
+body {
+    background: linear-gradient( rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)), url(../images/basketballBG.jpg)no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    ;
+}
+
+
+/*Main Homepage Text*/
+
+#homeTextContainer {
+    text-align: center;
+    position: fixed;
+    top: 20%;
+    left:35%;
+    background: rgba(255, 255, 255, 0.5);
+
+    /*transform: translateY(50%);*/
+
+}
+
+#homeTitle {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 15em;
+}
+
+#homeTagline {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3em;
+}
+
+
+/*Hamburger Menu*/
+
+header {
+    width: 47px;
+    background: #1d1f20;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.hamburger {
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 45px;
+    padding: 0px 15px 0px 15px;
+    color: #fff;
+    border: 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    z-index: 10000000000000;
+}
+
+.cross {
+    background: none;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    padding: 0px 15px 0px 15px;
+    color: #fff;
+    border: 0;
+    font-size: 3em;
+    line-height: 65px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    z-index: 10000000000000;
+}
+
+.menu {
+    z-index: 1000000;
+    font-weight: bold;
+    font-size: 0.8em;
+    width: 33%;
+    background: #131313;
+    position: relative;
+    text-align: center;
+    float:right;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+}
+
+.menu li {
+    display: block;
+    padding: 15px 0 15px 0;
+    border-bottom: #1d1f20 1px solid;
+}
+
+.menu li:hover {
+    display: block;
+    background: #181818;
+    padding: 15px 0 15px 0;
+    border-bottom: #1d1f20 1px solid;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    margin: 0px;
+    color: #fff;
+}
+
+.menu ul li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.glyphicon-home {
+    color: white;
+    font-size: 1.5em;
+    margin-top: 5px;
+    margin: 0 auto;
+}
+
+
+/*Buttons*/
+
+.button {
+    /*background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.createGameBtn {
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+}
+
+.findGameBtn {
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+}
+
+.createGameBtn:hover {
+    background-color: #555555;
+    color: white;
+    border none;
+}
+
+.findGameBtn:hover {
+    background-color: #555555;
+    color: white;
+    border none;
+}
+
+
+/*Footer*/
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+}
