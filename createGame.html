@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create Game</title>
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="assets/css/createGame.css">
+</head>
+
+<body>
+    <!-- Hamburger Menu -->
+    <header>
+        <button class="hamburger">&#9776;</button>
+        <button class="cross">&#735;</button>
+    </header>
+    <div class="menu">
+        <ul>
+            <a href="#">
+                <li><strong>Login</strong></li>
+            </a>
+            <a href="#">
+                <li style="background-color: #a4a4a4;">Basketball</li>
+            </a>
+            <a href="#">
+                <li style="background-color: #a4a4a4">Soccer</li>
+            </a>
+            <a href="#">
+                <li style="background-color: #a4a4a4">Disc Golf</li>
+            </a>
+        </ul>
+    </div>
+    <!-- LOGO -->
+    <div id="logo">pickup</div>
+    <!-- First Column -->
+    <div class="container">
+        <div class="col-lg-4">
+            <div class="panel panel-default panel-transparent">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Create New Game</h3>
+                </div>
+                <div class="panel-body">
+                    <!-- Sign-up Form (note the various input "types")-->
+                    <form role="form">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:100%;">
+                                Sport
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Basketball</a></li>
+                                <li><a href="#">Soccer</a></li>
+                                <li><a href="#">Disc Golf</a></li>
+                            </ul>
+                        </div>
+
+                         <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:100%;">
+                                Game Type
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <li><a href="#">5 on 5(BasketBall)</a></li>
+                                <li><a href="#">3 on 3(BasketBall)</a></li>
+                                <li><a href="#">11 on 11(Soccer)</a></li>
+                            </ul>
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="name">Your Name</label> -->
+                            <input type="text" class="form-control" id="name-input" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            
+                            <input type="text" class="form-control" id="name-input" placeholder="Game Name">
+                        </div>
+                        <div class="form-group">
+                           
+                            <input type="text" class="form-control" id="name-input" placeholder="Location">
+                        </div>
+                        <div class="form-group">
+                           
+                            <input type="text" class="form-control" id="name-input" placeholder="Date/Time">
+                        </div>
+                        
+                        
+                        <button type="submit" class="btn btn-success" id="add-train">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  Latest compiled and minified jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+   <!--  <script type="text/javascript" src="js/bootstrap.js"></script> -->
+    <script type="text/javascript" src="assets/js/hamburger.js"></script>
+    <!-- Firebase Reference -->
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+</body>
+
+</html>
