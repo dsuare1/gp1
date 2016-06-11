@@ -118,3 +118,45 @@ header {
     margin-top: 5px;
     margin: 0 auto;
 }
+
+/*Drop Down*/
+
+.dropdown-menu{
+    width: 100%;
+
+}
+.btn{
+    width: 100%;
+}
+#dropdownMenu2{
+    margin-top: 20px;
+    margin-bottom: 20px; 
+}
+
+.panel-transparent{
+    background: none;
+}
+
+.panel-transparent .panel-heading {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.panel-transparent .panel-body {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: center;  
+}
+
+:-ms-input-placeholder {  
+  text-align: center; 
+}
