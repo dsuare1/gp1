@@ -15,8 +15,11 @@ body {
 #homeTextContainer {
     text-align: center;
     position: fixed;
+    width: 50%;
     top: 20%;
-    left:35%;
+    left: 25vw;
+    right: 25vw;
+    margin: 0 auto;
     background: rgba(255, 255, 255, 0.5);
 
     /*transform: translateY(50%);*/
@@ -191,4 +194,36 @@ header {
     padding: 1rem;
     background-color: #efefef;
     text-align: center;
+}
+
+@media screen and (max-width:970px){
+    #homeTitle{
+        font-size: 10em;
+    }
+}
+
+@media screen and (max-width:686px){
+    #homeTitle{
+        font-size: 8.5em;
+    }
+      #homeTagline{
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width:500px){
+    #homeTitle{
+        font-size: 7em;
+    }
+    #homeTagline{
+        font-size: 2em;
+    }
+}
+@media screen and (max-width:476px){
+    #homeTitle{
+        font-size: 5em;
+    }
+    #homeTagline{
+        font-size: 2em;
+    }
 }
