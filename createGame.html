@@ -6,10 +6,9 @@
     <title>Create Game</title>
     <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
-  <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-<link rel="stylesheet" type="text/css" href="assets/css/createGame.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/createGame.css">
 </head>
 
 <body>
@@ -57,8 +56,7 @@
                                 <li><a href="#">Disc Golf</a></li>
                             </ul>
                         </div>
-
-                         <div class="dropdown">
+                        <div class="dropdown">
                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:100%;">
                                 Game Type
                                 <span class="caret"></span>
@@ -70,23 +68,20 @@
                             </ul>
                         </div>
                         <div class="form-group">
-                            <!-- <label for="name">Your Name</label> -->
-                            <input type="text" class="form-control" id="name-input" placeholder="Your Name">
+                            <input type="text" class="form-control" id="user-name-input" placeholder="Your Name">
                         </div>
                         <div class="form-group">
-                            
-                            <input type="text" class="form-control" id="name-input" placeholder="Game Name">
+                            <input type="text" class="form-control" id="game-name-input" placeholder="Game Name">
                         </div>
                         <div class="form-group">
-                           
-                            <input type="text" class="form-control" id="name-input" placeholder="Location">
+                            <input type="text" class="form-control" id="location-input" placeholder="Location">
                         </div>
                         <div class="form-group">
-                           
-                            <input type="text" class="form-control" id="name-input" placeholder="Date/Time">
+                            <input type="text" class="form-control" id="date-input" placeholder="Select A Date">
                         </div>
-                        
-                        
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="time-input" placeholder="Enter A Time">
+                        </div>
                         <button type="submit" class="btn btn-success" id="add-train">Submit</button>
                     </form>
                 </div>
@@ -96,12 +91,30 @@
     <!--  Latest compiled and minified jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-   <!--  <script type="text/javascript" src="js/bootstrap.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!--  <script type="text/javascript" src="js/bootstrap.js"></script> -->
     <script type="text/javascript" src="assets/js/hamburger.js"></script>
     <!-- Firebase Reference -->
     <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+
+
+<!--////////////////////////////////////////-->
+<!-- ADDED BY DERRICK 6-13-2016 -->
+<!--////////////////////////////////////////-->
+
+    <!-- MOMENT JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+
+    <!-- TO BE ADDED LATER TO A MAIN.JS FILE -->
+    <script   src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"   integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="   crossorigin="anonymous"></script>
+    <script>
+        $("#date-input").datepicker({
+            gotoCurrent: true,
+            numberOfMonths: 2,
+            minDate: new Date(moment()),
+            showAnim: "slide"
+        });
+    </script>
 </body>
 
 </html>

@@ -145,6 +145,11 @@ header {
     background: rgba(255, 255, 255, 0.5);
 }
 
+/* ADDED BY DERRICK 6-13-2016 */
+.form-control {
+    text-align: center;
+}
+
 ::-webkit-input-placeholder {
   text-align: center;
 }
@@ -160,3 +165,29 @@ header {
 :-ms-input-placeholder {  
   text-align: center; 
 }
+
+
+/* ADDED BY DERRICK 6-13-2016 */
+
+/* STYLING THE DATEPICKER CALENDAR */
+.ui-datepicker {
+    background-color: #fff;
+    padding: 10px;
+}
+
+/*.ui-datepicker-prev {
+    float: left;
+}
+
+.ui-datepicker-next {
+    float: right;
+}*/
+
+.ui-datepicker-title {
+    margin-top: 10px;
+}
+
+.ui-datepicker-group {
+    display: inline-block;
+}
+
