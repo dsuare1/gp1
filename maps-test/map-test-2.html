@@ -5,6 +5,7 @@
     <title>Create a game</title>
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="map-style-2.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
@@ -33,7 +34,19 @@
         </div>
         <div class="col-lg-9">
         	<div id="map-holder">
-        		<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=10&center=30.2672%2C-97.7431&key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo"></iframe>
+        		<iframe class="visible" id="init-map" width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=10&center=30.2672%2C-97.7431&key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo"></iframe>
+
+                <!-- BASKETBALL MAP -->
+                <iframe class="hidden" id="basketball-map" width='600' height='450' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/search?q=basketball&key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo'></iframe>
+
+                <!-- INDOOR BASKETBALL MAP -->
+                <iframe class="hidden" id="indoor-basketball-map" width='600' height='450' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/search?q=basketball+indoor&key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo'></iframe>
+
+                <!-- SOCCER MAP -->
+                <iframe class="hidden" id="soccer-map" width='600' height='450' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/search?q=soccer&key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo'></iframe>                
+
+                <!-- DISC GOLF MAP -->
+                <iframe class="hidden" id="disc-golf-map" width='600' height='450' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/search?q=disc+golf&key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo'></iframe>
         	</div>
         </div>
     </div>

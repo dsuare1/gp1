@@ -1,0 +1,13 @@
+#basketball-map,
+#soccer-map,
+#disc-golf-map {
+	display: none;
+}
+
+.hidden {
+	display: none;
+}
+
+.visible {
+	display: block;
+}
