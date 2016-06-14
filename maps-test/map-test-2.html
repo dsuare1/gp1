@@ -34,19 +34,16 @@
         </div>
         <div class="col-lg-9">
         	<div id="map-holder">
-        		<iframe class="visible" id="init-map" width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=10&center=30.2672%2C-97.7431&key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo"></iframe>
+        		<iframe class="visible" id="init-map" width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=10&amp;center=30.2672%2C-97.7431&amp;key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo"></iframe>
 
                 <!-- BASKETBALL MAP -->
-                <iframe class="hidden" id="basketball-map" width='600' height='450' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/search?q=basketball&key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo'></iframe>
-
-                <!-- INDOOR BASKETBALL MAP -->
-                <iframe class="hidden" id="indoor-basketball-map" width='600' height='450' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/search?q=basketball+indoor&key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo'></iframe>
+                <iframe class="hidden" id="basketball-map" width='600' height='450' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/search?q=basketball+court&amp;center=30.2672%2C-97.7431&amp;zoom=10&amp;key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo'></iframe>
 
                 <!-- SOCCER MAP -->
-                <iframe class="hidden" id="soccer-map" width='600' height='450' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/search?q=soccer&key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo'></iframe>                
+                <iframe class="hidden" id="soccer-map" width='600' height='450' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/search?q=soccer&amp;center=30.2672%2C-97.7431&amp;zoom=10&amp;key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo'></iframe>
 
                 <!-- DISC GOLF MAP -->
-                <iframe class="hidden" id="disc-golf-map" width='600' height='450' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/search?q=disc+golf&key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo'></iframe>
+                <iframe class="hidden" id="disc-golf-map" width='600' height='450' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/search?q=disc+golf&amp;center=30.2672%2C-97.7431&amp;zoom=10&amp;key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo'></iframe>
         	</div>
         </div>
     </div>
@@ -64,12 +61,17 @@
     			<div class="weather-data">Heat index:
     				<div id="heat-index"></div>
     			</div>
-    			<div class="weather-data">Visit the URL below for a full weather forecast!
-    				<div id="forecast-url"></div>
+    			<div class="weather-data">If you're scheduling your game more than a day in advance, visit the URL below for a full weather forecast!
+    				<a href="http://www.wunderground.com/US/TX/Austin.html" target="_blank"><div id="forecast-url"></div></a>
     			</div>
     	</div>
+        <hr><hr>
+        <div class="text-center">
+            <div id="temp-warning" class="hidden"></div>
+            <div id="wind-warning" class="hidden"></div>
+        </div>
     <script src="maptest.js"></script>
-    <script src="../assets/js/weatherAPI.js"></script>
+    <!-- <script src="../assets/js/weatherAPI.js"></script> -->
 </body>
 
 </html>
