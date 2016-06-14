@@ -48,7 +48,7 @@ $(".dropdown-menu li a").on("click", function() {
     $(this).parents(".dropdown").find('#dropdownMenu1').val($(this).data('value'));
     console.log($("#dropdownMenu1").val());
 
-    if ($("#dropdownMenu1").val() == "basketball") {
+    if ($("#dropdownMenu1").val() == "3-on-3 Basketball" || $("#dropdownMenu1").val() == "5-on-5 Basketball") {
         $(".visible").removeClass("visible").addClass("hidden");
         $("#basketball-map")
             .removeClass("hidden")
@@ -58,7 +58,7 @@ $(".dropdown-menu li a").on("click", function() {
         $("#temp-warning").removeClass("hidden");
     };
 
-    if ($("#dropdownMenu1").val() == "soccer") {
+    if ($("#dropdownMenu1").val() == "7-on-7 Soccer" || $("#dropdownMenu1").val() == "11-on-11 Soccer") {
         $(".visible").removeClass("visible").addClass("hidden");
         $("#soccer-map")
             .removeClass("hidden")
@@ -68,7 +68,7 @@ $(".dropdown-menu li a").on("click", function() {
         $("#wind-warning").addClass("hidden");
     };
 
-    if ($("#dropdownMenu1").val() == "disc-golf") {
+    if ($("#dropdownMenu1").val() == "Disc Golf (North Austin)" || $("#dropdownMenu1").val() == "Disc Golf (South Austin)") {
         $(".visible").removeClass("visible").addClass("hidden");
         $("#disc-golf-map")
             .removeClass("hidden")
