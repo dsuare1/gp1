@@ -16,6 +16,10 @@ body {
     margin: 10px 10px;
 }
 
+.form-group{
+    margin-bottom: 22px;
+}
+
 /*Hamburger Menu*/
 
 header {
@@ -66,7 +70,9 @@ header {
     font-size: 0.8em;
     width: 33%;
     background: #131313;
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
     text-align: center;
     float:right;
 }

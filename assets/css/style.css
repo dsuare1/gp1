@@ -11,6 +11,14 @@ body.landing-page {
     ;
 }
 
+body.findGameBody {
+    background: linear-gradient( rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)), url(../images/soccerBg.jpeg)no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    ;
+}
 
 /*Main Homepage Text*/
 
