@@ -6,13 +6,17 @@
     <title>Create Game</title>
     <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
-  <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-<link rel="stylesheet" type="text/css" href="assets/css/createGame.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Datepicker -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css">
+    <!-- Local page CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/createGame.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 </head>
 
-<body>
+<body class="createGameBody">
     <!-- Hamburger Menu -->
     <header>
         <button class="hamburger">&#9776;</button>
@@ -36,70 +40,111 @@
     </div>
     <!-- LOGO -->
     <div id="logo">pickup</div>
-    <!-- First Column -->
-    <div class="container">
-        <div class="col-lg-4">
-            <div class="panel panel-default panel-transparent">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Create New Game</h3>
-                </div>
-                <div class="panel-body">
-                    <!-- Sign-up Form (note the various input "types")-->
-                    <form role="form">
-                        <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:100%;">
-                                Sport
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li><a href="#">Basketball</a></li>
-                                <li><a href="#">Soccer</a></li>
-                                <li><a href="#">Disc Golf</a></li>
-                            </ul>
-                        </div>
 
-                         <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:100%;">
-                                Game Type
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <li><a href="#">5 on 5(BasketBall)</a></li>
-                                <li><a href="#">3 on 3(BasketBall)</a></li>
-                                <li><a href="#">11 on 11(Soccer)</a></li>
-                            </ul>
-                        </div>
-                        <div class="form-group">
-                            <!-- <label for="name">Your Name</label> -->
-                            <input type="text" class="form-control" id="name-input" placeholder="Your Name">
-                        </div>
-                        <div class="form-group">
-                            
-                            <input type="text" class="form-control" id="name-input" placeholder="Game Name">
-                        </div>
-                        <div class="form-group">
-                           
-                            <input type="text" class="form-control" id="name-input" placeholder="Location">
-                        </div>
-                        <div class="form-group">
-                           
-                            <input type="text" class="form-control" id="name-input" placeholder="Date/Time">
-                        </div>
-                        
-                        
-                        <button type="submit" class="btn btn-success" id="add-train">Submit</button>
-                    </form>
+    <!-- Weather row -->
+    <div class="container" id="weatherScroll">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default panel-transparent">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">News Ticker</h3>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--  Latest compiled and minified jQuery -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-   <!--  <script type="text/javascript" src="js/bootstrap.js"></script> -->
+    <!-- First Column -->
+    <div class="container" id="leftPanel">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="panel panel-default panel-transparent">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Create New Game</h3>
+                    </div>
+                    <div class="panel-body">
+                        <!-- Sign-up Form (note the various input "types")-->
+                        <form role="form">
+                            <div class="dropdown">
+                                <!-- <select id="sport-choice">
+                                <option selected value="base">Sport</option>
+                                <div class="dropdown-divider"></div>
+                                <option value="basketball">Basketball</option>
+                                <option value="soccer">Soccer</option>
+                                <option value="discGolf">Disc Golf</option>
+                            </select>
+                            <br>
+                            <select id="gameType-choice">
+                                <option value="base">Please choose from above</option>
+                            </select> -->
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:100%;">
+                                    Sport
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Basketball</a></li>
+                                    <li><a href="#">Soccer</a></li>
+                                    <li><a href="#">Disc Golf</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:100%;">
+                                    Game Type
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li><a href="#">5 on 5(BasketBall)</a></li>
+                                    <li><a href="#">3 on 3(BasketBall)</a></li>
+                                    <li><a href="#">11 on 11(Soccer)</a></li>
+                                </ul>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name-input" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name-input" placeholder="Game Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name-input" placeholder="Location">
+                            </div>
+                            <div class="form-group">
+                                <!-- <input type="text" class="form-control" id="name-input" placeholder="Date/Time"> -->
+                                <div class='input-group date' id='datetimepicker1'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success" id="add-train">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="panel panel-default panel-transparent">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Map</h3>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+            $(function() {
+                $('#datetimepicker1').datetimepicker();
+            });
+            </script>
+        </div>
+    </div>
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- Moment.js Reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/lang/en-gb.js"></script>
+    <!-- Bootstrap dateTimepicker -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.0.0/js/bootstrap-datetimepicker.min.js"></script>
+    <!-- Hamburger menu JS -->
     <script type="text/javascript" src="assets/js/hamburger.js"></script>
+    <!-- Link to main JS -->
+    <script type="text/javascript" src="assets/js/main.js"></script>
     <!-- Firebase Reference -->
     <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
 </body>

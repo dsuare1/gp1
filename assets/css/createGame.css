@@ -7,6 +7,11 @@ body {
     ;
 }
 
+
+/*////*/
+/*Logo*/
+/*////*/
+
 #logo {
     font-family: 'Shadows Into Light', cursive;
     font-size: 2em;
@@ -16,7 +21,10 @@ body {
     margin: 10px 10px;
 }
 
+
+/*//////////////*/
 /*Hamburger Menu*/
+/*//////////////*/
 
 header {
     width: 47px;
@@ -119,7 +127,27 @@ header {
     margin: 0 auto;
 }
 
+/*///////////*/
+/*News scroll*/
+/*///////////*/
+
+#weatherScroll {
+    margin-top:100px;
+}
+
+
+/*//////////*/
+/*Left panel*/
+/*//////////*/
+
+.form-group {
+    margin-bottom:22px;
+}
+
+
+/*/////////*/
 /*Drop Down*/
+/*/////////*/
 
 .dropdown-menu{
     width: 100%;
