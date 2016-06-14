@@ -1,6 +1,6 @@
-/* LANDING PAGE */
-
-/*Body Styling*/
+/***************************************************************/
+/*Body Stylings*/
+/***************************************************************/
 
 body.landing-page {
     background: linear-gradient( rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)), url(../images/basketballBG.jpg)no-repeat center center fixed;
@@ -20,6 +20,14 @@ body.findGameBody {
     ;
 }
 
+body.createGame {
+    background: url(../images/createGamebg.jpeg)no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 /*Main Homepage Text*/
 
 #homeTextContainer {
@@ -31,6 +39,7 @@ body.findGameBody {
     right: 25vw;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
 
     /*transform: translateY(50%);*/
 
@@ -54,7 +63,7 @@ body.findGameBody {
 
 /*Hamburger Menu*/
 
-header {
+/*header {
     width: 47px;
     background: #1d1f20;
     height: 50px;
@@ -153,6 +162,25 @@ header {
     font-size: 1.5em;
     margin-top: 5px;
     margin: 0 auto;
+}*/
+
+/***************************************************************/
+/*Navbar Styles*/
+/***************************************************************/
+.navbar-default {
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+}
+
+#logo {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2em;
+    width: 5%;
+    color: white;
+    padding: 10px;
+    margin: 10px 10px;
+    line-height: 15px;
 }
 
 /* all links */
@@ -164,7 +192,9 @@ a:hover {
     text-decoration: none;
 }
 
+/***************************************************************/
 /*Buttons*/
+/***************************************************************/
 
 .button {
     /*background-color: #4CAF50; /* Green */
@@ -186,12 +216,14 @@ a:hover {
     background-color: transparent;
     color: black;
     border: 2px solid black;
+    border-radius: 10px;
 }
 
 .findGameBtn {
     background-color: transparent;
     color: black;
     border: 2px solid black;
+    border-radius: 10px;
 }
 
 .createGameBtn:hover {
@@ -206,8 +238,9 @@ a:hover {
     border none;
 }
 
-
+/***************************************************************/
 /*Footer*/
+/***************************************************************/
 
 .footer {
     position: absolute;
@@ -218,6 +251,10 @@ a:hover {
     background-color: #efefef;
     text-align: center;
 }
+
+/***************************************************************/
+/*Media Queries*/
+/***************************************************************/
 
 @media screen and (max-width:970px){
     #homeTitle{
@@ -251,34 +288,12 @@ a:hover {
     }
 }
 
+/***************************************************************/
+/*Create Game styles*/
+/***************************************************************/
 
-/* CREATE GAME PAGE STYLES */
-
-.navbar-default {
-    height: 60px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border: none;
-}
-
-body.createGameBody {
-    background: url(../images/createGamebg.jpeg)no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    ;
-}
-
-#logo {
-    font-family: 'Shadows Into Light', cursive;
-    font-size: 2em;
-    width: 5%;
-    color: white;
-    padding: 10px;
-    margin: 10px 10px;
-}
-
-.create-game-map {
+.create-game-map,
+.find-game-map {
     border: 2px solid #000;
     border-radius: 2px;
 }
@@ -289,16 +304,6 @@ body.createGameBody {
     color: #fff;
     line-height: 49px;
 }
-
-/*#weather-scroll-div {
-    white-space:no-wrap;
-    overflow:hidden;
-}
-#weather-scroll-div > .scrolling-text {
-    white-space:nowrap;
-    display:inline;
-    width:auto;
-}*/
 
 #weather-info-div {
     height: 440px;
@@ -313,9 +318,20 @@ body.createGameBody {
     margin: 5% 0;
 }
 
+/***************************************************************/
+/*Weather warning div*/
+/***************************************************************/
+#weather-pulse-div {
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 10px;
+}
+
 /*Hamburger Menu*/
 
-header {
+/*header {
     width: 47px;
     background: #1d1f20;
     height: 50px;
@@ -415,15 +431,7 @@ header {
     margin-top: 5px;
     margin: 0 auto;
 }
-
-/*WEATHER SCROLLER DIV*/
-#weather-scroll-div {
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 1px solid white;
-    border-radius: 10px;
-    margin: 10px;
-}
+*/
 
 /*Drop Down*/
 
@@ -516,33 +524,13 @@ header {
     display: block;
 }
 
-/* Create Game CSS */
-body.createGame {
-    background: url(../images/createGamebg.jpeg)no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    ;
-}
-
-#logo {
-    font-family: 'Shadows Into Light', cursive;
-    font-size: 2em;
-    width: 5%;
-    color: white;
-    padding: 10px;
-    margin: 10px 10px;
-    line-height: 15px;
-}
-
 .form-group{
     margin-bottom: 22px;
 }
 
 /*Hamburger Menu*/
 
-header {
+/*header {
     width: 47px;
     background: #1d1f20;
     height: 50px;
@@ -643,11 +631,11 @@ header {
     font-size: 1.5em;
     margin-top: 5px;
     margin: 0 auto;
-}
+}*/
 
 /*Drop Down*/
 
-.dropdown-menu{
+/*.dropdown-menu{
     width: 100%;
 
 }
@@ -669,7 +657,7 @@ header {
 
 .panel-transparent .panel-body {
     background: rgba(255, 255, 255, 0.5);
-}
+}*/
 
 /* ADDED BY DERRICK 6-13-2016 */
 .form-control {
