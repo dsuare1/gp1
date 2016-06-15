@@ -113,9 +113,9 @@ $.ajax({ url: queryURL, method: 'GET' }).done(function(response) {
     console.log(response);
 
     if (response.current_observation.feelslike_f > 85) {
-        $("#temp-warning").html("Looks like it's pretty hot outside.  You may want to consider looking for places to play basketball inside.");
+        $("#temp-warning").html("Looks like it's pretty hot outside.  You may want to consider looking for places to play inside.");
     } else {
-        $("#temp-warning").html("Looks like the weather is pretty nice outside!  Consider looking for an outside court to play!");
+        $("#temp-warning").html("Looks like the weather is pretty nice outside!  Consider looking for an outside area to play!");
     };
 
     if (response.current_observation.wind_gust_mph > 25) {
@@ -212,7 +212,6 @@ pickupData.on("child_added", function(childSnapshot, prevChildKey){
 
     console.log(childSnapshot.val());
 
-    // Store everything into a variable.
     // Grabs user input
     var pickupGameType = $("#dropdownMenu1").val().trim();
     var pickupUserName = $("#user-name-input").val().trim();
@@ -220,6 +219,8 @@ pickupData.on("child_added", function(childSnapshot, prevChildKey){
     var pickupLocation = $("#location-input").val().trim();
     var pickupDate = $("#datetimepicker1").val().trim();
     var pickupTime = $("#datetimepicker3").val().trim();
+
+    // $(".active-game").append("<p")
 
     // // Prettify the pickup Time
     // var pickupTimePretty = moment.unix(pickupTime).format("MM/DD/YY");

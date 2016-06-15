@@ -39,7 +39,8 @@ body.createGame {
     right: 25vw;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.5);
-    border-radius: 50px;
+    border-radius: 20px;
+    padding-bottom: 50px;
 
     /*transform: translateY(50%);*/
 
@@ -679,3 +680,27 @@ a:hover {
 :-ms-input-placeholder {  
   text-align: center; 
 }
+
+
+/***************************************************************/
+/*Individual game holder for 'Find a game'*/
+/***************************************************************/
+#individual-game-holder {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#individual-game-holder h4, p {
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
