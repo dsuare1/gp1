@@ -51,6 +51,7 @@ body.createGame {
 #homeTagline {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 3em;
+    color: #000;
 }
 
 .navbar-link-author {
