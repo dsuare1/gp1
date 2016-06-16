@@ -1,6 +1,6 @@
-/* LANDING PAGE */
-
-/*Body Styling*/
+/***************************************************************/
+/*Body Stylings*/
+/***************************************************************/
 
 body.landing-page {
     background: url(../images/basketballBG.jpg)no-repeat center center fixed;
@@ -20,14 +20,14 @@ body.findGameBody {
     ;
 }
 
-body.createGameBody {
-    background:url(../images/createGamebg.jpeg)no-repeat center center fixed;
+body.createGame {
+    background: url(../images/createGamebg.jpeg)no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    ;
 }
+
 /*Main Homepage Text*/
 
 #homeTextContainer {
@@ -39,9 +39,8 @@ body.createGameBody {
     right: 25vw;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.5);
-
-    /*transform: translateY(50%);*/
-
+    border-radius: 20px;
+    padding-bottom: 50px;
 }
 
 #homeTitle {
@@ -54,112 +53,56 @@ body.createGameBody {
     font-size: 3em;
 }
 
-
-/*Hamburger Menu*/
-
-header {
-    width: 47px;
-    background: #1d1f20;
-    height: 50px;
-    line-height: 50px;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.hamburger {
-    background: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    line-height: 45px;
-    padding: 0px 15px 0px 15px;
+.navbar-link-author {
+    height: 60px;
     color: #fff;
-    border: 0;
-    font-size: 1.4em;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    z-index: 10000000000000;
+    line-height: 30px;
 }
 
-.cross {
-    background: none;
-    position: absolute;
-    top: 0px;
-    right: 0;
-    padding: 0px 15px 0px 15px;
-    color: #fff;
-    border: 0;
-    font-size: 3em;
-    line-height: 65px;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    z-index: 10000000000000;
+
+/***************************************************************/
+/*Navbar Styles*/
+/***************************************************************/
+.navbar-default {
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border:none;
 }
 
-.menu {
-    z-index: 1000000;
-    font-weight: bold;
-    font-size: 0.8em;
-    width: 33%;
-    background: #131313;
-    position: relative;
-    text-align: center;
-    float:right;
-}
-
-.menu ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    list-style-image: none;
-}
-
-.menu li {
-    display: block;
-    padding: 15px 0 15px 0;
-    border-bottom: #1d1f20 1px solid;
-}
-
-.menu li:hover {
-    display: block;
-    background: #181818;
-    padding: 15px 0 15px 0;
-    border-bottom: #1d1f20 1px solid;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    margin: 0px;
-    color: #fff;
-}
-
-.menu ul li a:hover {
-    color: #fff;
-    text-decoration: none;
-}
-
-.menu a {
-    text-decoration: none;
+#logo {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2em;
+    width: 5%;
     color: white;
+    padding: 10px;
+    margin: 10px 10px;
+    line-height: 15px;
 }
 
-.menu a:hover {
+/* all links */
+a {
+    display: inline-block;
+}
+
+.navbar a:hover {
     text-decoration: none;
-    color: white;
+    border-bottom: 3px solid white;
+    transition: color 1s;
 }
 
-.glyphicon-home {
-    color: white;
-    font-size: 1.5em;
-    margin-top: 5px;
-    margin: 0 auto;
+.navbar a {
+    color:white;
+}
+
+a:active {
+    color:white;
 }
 
 
+
+/***************************************************************/
 /*Buttons*/
+/***************************************************************/
 
 .button {
     /*background-color: #4CAF50; /* Green */
@@ -181,12 +124,14 @@ header {
     background-color: transparent;
     color: black;
     border: 2px solid black;
+    border-radius: 10px;
 }
 
 .findGameBtn {
     background-color: transparent;
     color: black;
     border: 2px solid black;
+    border-radius: 10px;
 }
 
 .createGameBtn:hover {
@@ -201,8 +146,9 @@ header {
     border none;
 }
 
-
+/***************************************************************/
 /*Footer*/
+/***************************************************************/
 
 .footer {
     position: absolute;
@@ -210,9 +156,16 @@ header {
     bottom: 0;
     left: 0;
     padding: 1rem;
-    background-color: #efefef;
+    background-color: rgba(0, 0, 0, 0.8);
+    color:white;
     text-align: center;
+    font-size:0.7em;
+
 }
+
+/***************************************************************/
+/*Media Queries*/
+/***************************************************************/
 
 @media screen and (max-width:970px){
     #homeTitle{
@@ -246,129 +199,46 @@ header {
     }
 }
 
+/***************************************************************/
+/*Create Game styles*/
+/***************************************************************/
 
-/* CREATE GAME PAGE STYLES */
+.create-game-map,
+.find-game-map,
+.show-game-map {
+    border: 2px solid #000;
+    border-radius: 2px;
+}*/
 
-body.createGameBody {
-    background: url(../images/createGamebg.jpeg)no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    ;
-}
-
-#logo {
-    font-family: 'Shadows Into Light', cursive;
-    font-size: 2em;
-    width: 5%;
-    color: white;
-    padding: 10px;
-    margin: 10px 10px;
-}
-
-/*Hamburger Menu*/
-
-header {
-    width: 47px;
-    background: #1d1f20;
-    height: 50px;
-    line-height: 50px;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.hamburger {
-    background: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    line-height: 45px;
-    padding: 0px 15px 0px 15px;
-    color: #fff;
-    border: 0;
-    font-size: 1.4em;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    z-index: 10000000000000;
-}
-
-.cross {
-    background: none;
-    position: absolute;
-    top: 0px;
-    right: 0;
-    padding: 0px 15px 0px 15px;
-    color: #fff;
-    border: 0;
-    font-size: 3em;
-    line-height: 65px;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    z-index: 10000000000000;
-}
-
-.menu {
-    z-index: 1000000;
-    font-weight: bold;
-    font-size: 0.8em;
-    width: 33%;
-    background: #131313;
-    position: relative;
-    text-align: center;
-    float:right;
-}
-
-.menu ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    list-style-image: none;
-}
-
-.menu li {
-    display: block;
-    padding: 15px 0 15px 0;
-    border-bottom: #1d1f20 1px solid;
-}
-
-.menu li:hover {
-    display: block;
-    background: #181818;
-    padding: 15px 0 15px 0;
-    border-bottom: #1d1f20 1px solid;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    margin: 0px;
-    color: #fff;
-}
-
-.menu ul li a:hover {
-    color: #fff;
-    text-decoration: none;
-}
-
-.menu a {
-    text-decoration: none;
-    color: white;
-}
-
-.menu a:hover {
-    text-decoration: none;
-    color: white;
-}
-
-.glyphicon-home {
-    color: white;
+#temp-warning,
+#wind-warning {
     font-size: 1.5em;
-    margin-top: 5px;
-    margin: 0 auto;
+    color: #fff;
+    line-height: 49px;
 }
+
+#weather-info-div {
+    height: 440px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 10px;
+}
+
+.weather-data {
+    font-size: 1em;
+    margin: 5% 0;
+}
+
+/***************************************************************/
+/*Weather warning div*/
+/***************************************************************/
+#weather-pulse-div {
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    margin: 10px;
+}
+
 
 /*Drop Down*/
 
@@ -384,11 +254,15 @@ header {
     margin-bottom: 20px; 
 }
 
+.panel-heading {
+    background-color: #337ab7;
+}
+
 .panel-transparent{
     background: none;
 }
 
-.panel-transparent .panel-heading {
+.panel-transparent {
     background: rgba(255, 255, 255, 0.5);
 }
 
@@ -396,57 +270,33 @@ header {
     background: rgba(255, 255, 255, 0.5);
 }
 
-/* ADDED BY DERRICK 6-13-2016 */
 .form-control {
     text-align: center;
 }
 
 ::-webkit-input-placeholder {
-  text-align: center;
+    text-align: center;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-  text-align: center;  
+    text-align: center;  
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-  text-align: center;  
+    text-align: center;  
 }
 
 :-ms-input-placeholder {  
-  text-align: center; 
+    text-align: center; 
 }
 
-
-/* ADDED BY DERRICK 6-13-2016 */
-
-/* STYLING THE DATEPICKER CALENDAR */
-.ui-datepicker {
-    background-color: #fff;
-    padding: 10px;
-}
-
-/*.ui-datepicker-prev {
-    float: left;
-}
-
-.ui-datepicker-next {
-    float: right;
-}*/
-
-.ui-datepicker-title {
-    margin-top: 10px;
-}
-
-.ui-datepicker-group {
-    display: inline-block;
-}
 
 /* MAP STYLES */
 #basketball-map,
 #soccer-map,
 #disc-golf-map {
     display: none;
+    border:none;
 }
 
 .hidden {
@@ -455,4 +305,34 @@ header {
 
 .visible {
     display: block;
+}
+
+.form-group{
+    margin-bottom: 22px;
+}
+
+
+/***************************************************************/
+/*Individual game holder for 'Find a game'*/
+/***************************************************************/
+.live-game {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+    border: 5px solid red;
+}
+
+h4 {
+    margin: 0;
+    color: yellow;
+}
+
+p {
+    margin: 0;
+    color: #fff;
+    font-size: 2em;
+}
+
+#map-holder {
+    position: fixed;
 }
