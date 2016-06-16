@@ -58,7 +58,7 @@ function checkUserName(pickupUserName) {
     re = /[a-z]\w+/gi;
 
     if (pickupUserName !== '' && !pickupUserName.match(re)) {
-        vex.dialog.alert("Please enter a valid destination");
+        vex.dialog.alert("Please enter a valid user name");
         return false;
     }
     return true;
@@ -69,7 +69,7 @@ function checkGameName(pickupGameName) {
     re = /[a-z]\w+/gi;
 
     if (pickupGameName !== '' && !pickupGameName.match(re)) {
-        vex.dialog.alert("Please enter a valid destination");
+        vex.dialog.alert("Please enter a valid game name");
         return false;
     }
     return true;
@@ -77,7 +77,7 @@ function checkGameName(pickupGameName) {
 
 function checkLocation(pickupLocation) {
 
-    if (pickupLocation !== '') {
+    if (pickupLocation === '') {
         vex.dialog.alert("Please enter a valid location (either the place name or the full address)");
         return false;
     }
@@ -89,7 +89,7 @@ function checkDate(pickupDate) {
     re = /^([0-1]?[0-9]|2[0-3])(:[0-5][0-9])?$/;
 
     if (pickupDate !== '' && !pickupDate.match(re)) {
-        vex.dialog.alert("Please enter a valide date");
+        vex.dialog.alert("Please enter a valid date");
         return false;
     }
     return true;
@@ -102,6 +102,7 @@ function checkTime(pickupTime) {
     if (pickupTime !== '' && !pickupTime.match(re)) {
         vex.dialog.alert("Please enter a valid time")
     }
+    return true;
 }
 
 ///////// 'findGame.html' CHILDREN ADDED FROM FIREBASE /////////
@@ -121,12 +122,6 @@ $("#individual-game-holder").on("click", function() {
 });
 
 
-// DATE-TIME PICKER
-$("#datetimepicker1").on("click", function() {
-    $('#datetimepicker1').datetimepicker();
-});
-
-
 ///////////////////////////////////////////////////////////
 // AJAX CALLS
 ///////////////////////////////////////////////////////////
@@ -143,7 +138,7 @@ var queryURL = "http://api.wunderground.com/api/" + APIKey + "/geolookup/conditi
 $.ajax({ url: queryURL, method: 'GET' }).done(function(response) {
 
     // Log the resulting object
-    console.log(response);
+    // console.log(response);
 
     if (response.current_observation.feelslike_f > 85) {
         $("#temp-warning").html("Looks like it's pretty hot outside.  You may want to consider looking for places to play inside.");
@@ -201,18 +196,19 @@ $("#addPickupGame").on("click", function(e) {
     if (($("#user-name-input").val() == "") || ($("#game-name-input").val() == "") || ($("#location-input").val() == "") || ($("#date-input").val()) == "" || ($("#time-input").val() == "" )) {
             vex.dialog.alert("Please enter the necessary information into the form");
             return false;
-        }
+        };
 
     // prevents reloading of page
     e.preventDefault();
 
     // Grabs user input
     var pickupGameType = $("#dropdownMenu1").val().trim();
+    console.log(pickupGameType);
     var pickupUserName = $("#user-name-input").val().trim();
     var pickupGameName = $("#game-name-input").val().trim();
     var pickupLocation = $("#location-input").val().trim();
-    var pickupDate = $("#datetimepicker1").val().trim();
-    var pickupTime = $("#datetimepicker3").val().trim();
+    var pickupDate = $("#date-input").val().trim();
+    var pickupTime = $("#time-input").val().trim();
 
     // Creates local "temporary" object for holding pickup data
 
@@ -224,10 +220,11 @@ $("#addPickupGame").on("click", function(e) {
             location: pickupLocation,
             date: pickupDate,
             time: pickupTime
-    }   
+        }
 
     // Uploads pickup data to the database
     pickupData.push(newPickup);
+}
 
     // Logs everything to console
     console.log(newPickup.type);
@@ -242,8 +239,8 @@ $("#addPickupGame").on("click", function(e) {
     $("#user-name-input").val("");
     $("#game-name-input").val("");
     $("#location-input").val("");
-    $("#datetimepicker1").val("");
-    $("#datetimepicker3").val("");
+    $("#date-input").val("");
+    $("#time-input").val("");
 
 });
 
@@ -257,8 +254,8 @@ pickupData.on("child_added", function(childSnapshot, prevChildKey) {
     var pickupUserName = $("#user-name-input").val().trim();
     var pickupGameName = $("#game-name-input").val().trim();
     var pickupLocation = $("#location-input").val().trim();
-    var pickupDate = $("#datetimepicker1").val().trim();
-    var pickupTime = $("#datetimepicker3").val().trim();
+    var pickupDate = $("#date-input").val().trim();
+    var pickupTime = $("#time-input").val().trim();
 
     $(".active-games").append("<h4>Game type:</h4><p id='game-type'>" + pickupGameType + "</p><br><h4>Created by:</h4><p id='created-by'>" + pickupUserName + "</p><br><h4>Game name:</h4><p id='game-name'>" + pickupGameName + "</p><br><h4>Location:</h4><p id='game-location'>" + pickupLocation + "</p><br><h4>Date:</h4><p id='game-date'>" + pickupDate + "</p><br><h4>Time</h4><p id='game-time'>" + pickupTime + "</p>");
 
