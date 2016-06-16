@@ -66,7 +66,7 @@ body.createGame {
 .navbar-default {
     height: 60px;
     background-color: rgba(0, 0, 0, 0.8);
-    border: none;
+    border:none;
 }
 
 #logo {
@@ -84,9 +84,21 @@ a {
     display: inline-block;
 }
 
-a:hover {
+.navbar a:hover {
     text-decoration: none;
+    border-bottom: 3px solid white;
+    transition: color 1s;
 }
+
+.navbar a {
+    color:white;
+}
+
+a:active {
+    color:white;
+}
+
+
 
 /***************************************************************/
 /*Buttons*/
@@ -144,8 +156,11 @@ a:hover {
     bottom: 0;
     left: 0;
     padding: 1rem;
-    background-color: #efefef;
+    background-color: rgba(0, 0, 0, 0.8);
+    color:white;
     text-align: center;
+    font-size:0.7em;
+
 }
 
 /***************************************************************/
@@ -193,7 +208,7 @@ a:hover {
 .show-game-map {
     border: 2px solid #000;
     border-radius: 2px;
-}
+}*/
 
 #temp-warning,
 #wind-warning {
@@ -204,7 +219,6 @@ a:hover {
 
 #weather-info-div {
     height: 440px;
-    border: 1px solid #000;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.95);
     padding: 10px;
@@ -221,7 +235,6 @@ a:hover {
 #weather-pulse-div {
     height: 50px;
     background-color: rgba(0, 0, 0, 0.7);
-    border: 1px solid white;
     border-radius: 10px;
     margin: 10px;
 }
@@ -283,6 +296,7 @@ a:hover {
 #soccer-map,
 #disc-golf-map {
     display: none;
+    border:none;
 }
 
 .hidden {

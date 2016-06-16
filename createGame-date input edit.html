@@ -2,36 +2,65 @@
 <html>
 
 <head>
+
     <meta charset="UTF-8">
     <title>Create Game</title>
+    
     <!-- FONTS -->
     <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
+    
     <!-- BOOTSTRAP Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    
     <!-- BOOTSTRAP date and time picker CSS -->
     <link rel="stylesheet" type="text/css" href="assets/bs-date-time-picker/css/bootstrap-datetimepicker.min.css">
+
     <!-- AUTHOR STYLESHEET -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
     <!-- Firebase Reference -->
     <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-    <!--  Latest compiled and minified jQuery -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+
 </head>
 
 <body class="createGame">
+
+    <!-- Hamburger Menu -->
+   <!--  <header>
+        <button class="hamburger">&#9776;</button>
+        <button class="cross">&#735;</button>
+    </header>
+    <div class="menu">
+        <ul>
+            <a href="#">
+                <li><strong>Login</strong></li>
+            </a>
+            <a href="#">
+                <li style="background-color: #a4a4a4;">Basketball</li>
+            </a>
+            <a href="#">
+                <li style="background-color: #a4a4a4">Soccer</li>
+            </a>
+            <a href="#">
+                <li style="background-color: #a4a4a4">Disc Golf</li>
+            </a>
+        </ul>
+    </div> -->
     <!-- LOGO -->
+
     <nav class="navbar navbar-default">
         <div class="container">
             <a href="index.html">
                 <div id="logo">pickup</div>
             </a>
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#" class="navbar-link-author" style="color:white; background-color:black;">Create Game<span class="sr-only">(current)</span></a></li>
-                <li><a href="findGame.html" class="navbar-link-author" style="color:white;">Find Game</a></li>
+                <li class="active"><a href="#" class="navbar-link-author">Create Game<span class="sr-only">(current)</span></a></li>
+                <li><a href="findGame.html" class="navbar-link-author">Find Game</a></li>
             </ul>
         </div>
     </nav>
+    
     <div class="container">
         <!-- WEATHER DATA SCROLL -->
         <div class="row">
@@ -40,6 +69,7 @@
                 <div id="wind-warning" class="hidden pulsate-text"></div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-lg-3">
                 <div class="panel panel-default panel-transparent">
@@ -47,12 +77,14 @@
                         <h3 class="panel-title">Create New Game</h3>
                     </div>
                     <div class="panel-body">
+                    
                         <!-- Sign-up Form (note the various input "types")-->
                         <form role="form">
+
                             <div class="dropdown form-group">
                                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:100%;">
-                                    Sport &amp; Game Type
-                                    <span class="caret"></span>
+                                Sport &amp; Game Type
+                                <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                     <li class="dropdown-header">Basketball</li>
@@ -66,114 +98,105 @@
                                     <li><a href="#" data-value="Disc Golf (South Austin)">Disc Golf (South Austin)</a></li>
                                 </ul>
                             </div>
+                        
+                        
 
+
+                        <!-- <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:100%;">
+                                Game Type
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <li class="sports-options"><a href="#">5 on 5(BasketBall)</a></li>
+                                <li class="sports-options"><a href="#">3 on 3(BasketBall)</a></li>
+                                <li class="sports-options"><a href="#">11 on 11(Soccer)</a></li>
+                            </ul>
+                        </div> -->
+                        
                             <div class="form-group">
                                 <input type="text" class="form-control" id="user-name-input" placeholder="Your Name">
                             </div>
+
                             <div class="form-group">
                                 <input type="text" class="form-control" id="game-name-input" placeholder="Game Name">
                             </div>
+                        
                             <div class="form-group">
-                                <input type="text" class="form-control" id="location-input" placeholder="Location (Address or Place)">
+                                <input type="text" class="form-control" id="location-input" placeholder="Location">
                             </div>
-
-                            <!-- <div class="form-group">
-                            <input type="text" class="form-control" id="date-input" placeholder="Select A Date">
-                        </div> -->
+                        
                             <div class="form-group">
-                                <input type="text" class="form-control" id="date-input" placeholder="MM-DD-YYYY (06-15-2016)">
+                                    <input type="text" class="form-control" id="date-input" placeholder="MM/DD/YY 06/15/16"/>
                             </div>
-                            <!-- <script type="text/javascript">
-                                $(function() {
-                                    $('#datetimepicker1').datetimepicker();
-                                });
-                            
-                            </script> -->
+                        
                             <div class="form-group">
-                                <input type="text" class="form-control" id="time-input" placeholder="Military (16:30)">
+                                    <input type='text' class="form-control" id="time-input" placeholder="Military 16:30"/>
                             </div>
-
-                            <!-- <script type="text/javascript">
-                                $(function() {
-                                    $('#datetimepicker3').datetimepicker();
-                                });
-                            
-                            </script> -->
-                            <!-- <div class="form-group">
-                            <input type="text" class="form-control" id="time-input" placeholder="Enter A Time">
-                        </div> -->
 
                             <button type="submit" class="btn btn-success" id="addPickupGame">Submit</button>
                         </form>
                     </div>
                 </div>
             </div>
+
             <!-- MAP HOLDER -->
             <div class="col-lg-5">
                 <div id="map-holder">
-                    <iframe class="visible create-game-map" id="init-map" width="458" height="440" frameborder="0" src="https://www.google.com/maps/embed/v1/view?zoom=10&amp;center=30.2672%2C-97.7431&amp;key=AIzaSyDchdsjpvalXui_QTAFtm9Hb1Ka67X5s1k"></iframe>
+                    <iframe class="visible create-game-map" id="init-map" width="100%" height="440" frameborder="0" src="https://www.google.com/maps/embed/v1/view?zoom=10&amp;center=30.2672%2C-97.7431&amp;key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo"></iframe>
 
-                    <iframe class="hidden create-game-map" id="basketball-map" width='458' height='440' frameborder='0' src='https://www.google.com/maps/embed/v1/search?q=basketball+court&amp;center=30.2672%2C-97.7431&amp;zoom=10&amp;key=AIzaSyDchdsjpvalXui_QTAFtm9Hb1Ka67X5s1k'></iframe>
+                    <!-- BASKETBALL MAP -->
+                    <iframe class="hidden create-game-map" id="basketball-map" width='100%' height='440' frameborder='0' src='https://www.google.com/maps/embed/v1/search?q=basketball+court&amp;center=30.2672%2C-97.7431&amp;zoom=10&amp;key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo'></iframe>
 
                     <!-- SOCCER MAP -->
-                    <iframe class="hidden create-game-map" id="soccer-map" width='458' height='440' frameborder='0' src='https://www.google.com/maps/embed/v1/search?q=soccer&amp;center=30.2672%2C-97.7431&amp;zoom=10&amp;key=AIzaSyDchdsjpvalXui_QTAFtm9Hb1Ka67X5s1k'></iframe>
+                    <iframe class="hidden create-game-map" id="soccer-map" width='100%' height='440' frameborder='0' src='https://www.google.com/maps/embed/v1/search?q=soccer&amp;center=30.2672%2C-97.7431&amp;zoom=10&amp;key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo'></iframe>
 
                     <!-- DISC GOLF MAP -->
-                    <iframe class="hidden create-game-map" id="disc-golf-map" width='458' height='440' frameborder='0' src='https://www.google.com/maps/embed/v1/search?q=disc+golf&amp;center=30.2672%2C-97.7431&amp;zoom=10&amp;key=AIzaSyDchdsjpvalXui_QTAFtm9Hb1Ka67X5s1k'></iframe>
+                    <iframe class="hidden create-game-map" id="disc-golf-map" width='100%' height='440' frameborder='0' src='https://www.google.com/maps/embed/v1/search?q=disc+golf&amp;center=30.2672%2C-97.7431&amp;zoom=10&amp;key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo'></iframe>
                 </div>
             </div>
-            <!-- WEATHER TEXT -->
             <div class="col-lg-4">
                 <div class="text-center" id="weather-info-div">
                     <h4>Current Weather conditions for Austin, TX:</h4>
-                    <hr>
-                    <div class="weather-data"><strong>Overall Weather:</strong>
+                    <div class="weather-data">Overall Weather:
                         <div id="weather"></div>
                     </div>
-                    <div class="weather-data"><strong>Current Temperature:</strong>
+                    <div class="weather-data">Current Temperature:
                         <div id="temp"></div>
                     </div>
-                    <div class="weather-data"><strong>Feels like:</strong>
+                    <div class="weather-data">Feels like:
                         <div id="feels-like"></div>
                     </div>
-                    <div class="weather-data"><strong>Heat index:</strong>
+                    <div class="weather-data">Heat index:
                         <div id="heat-index"></div>
                     </div>
                     <div class="weather-data">If you're scheduling your game more than a day in advance, visit the URL below for a full weather forecast!
-                        <a href="http://www.wunderground.com/US/TX/Austin.html" target="_blank">
-                            <div id="forecast-url"></div>
-                        </a>
+                        <a href="http://www.wunderground.com/US/TX/Austin.html" target="_blank"><div id="forecast-url"></div></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <div class="footer">&copy; 2016 Derrick Suarez, Jimmie Jackson, Ben Arteaga, Royce Ching </div>
-    <!-- MOMENT JS -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+
+    <!--  Latest compiled and minified jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    
     <!-- Latest compiled and minified BOOTSTRAP JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <!-- BOOTSTRAP date time picker JS -->
-    <script src="assets/bs-date-time-picker/js/bootstrap-datetimepicker.min.js"></script>
-    <!-- AUTHOR-CREATED HAMBURGER JS -->
-    <!-- <script type="text/javascript" src="assets/js/hamburger.js"></script> -->
-    <!-- AUTHOR CREATED MAIN JS -->
-    <script type="text/javascript" src="assets/js/main.js"></script>
 
+    <!-- AUTHOR-CREATED HAMBURGER JS -->
+    <script type="text/javascript" src="assets/js/hamburger.js"></script>
+    
+    <!-- AUTHOR CREATED MAIN JS -->
+    <script type="text/javascript" src="assets/js/main-date input edit.js"></script>
     
     <!-- BOOTSTRAP date time picker JS -->
     <script src="assets/bs-date-time-picker/js/bootstrap-datetimepicker.min.js"></script>
 
     <!-- MOMENT JS -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
-
-    <!-- VEX MODALS -->
-    <script src="assets/js/vex.combined.min.js"></script>
-    <script>
-    vex.defaultOptions.className = 'vex-theme-os';
-    </script>
-    <link rel="stylesheet" href="assets/css/vex.css" />
-    <link rel="stylesheet" href="assets/css/vex-theme-os.css" />
 
 </body>
 
