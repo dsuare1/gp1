@@ -100,7 +100,8 @@ function checkTime(pickupTime) {
     re = /^([0-1]?[0-9]|2[0-3])(:[0-5][0-9])?$/;
 
     if (pickupTime !== '' && !pickupTime.match(re)) {
-        vex.dialog.alert("Please enter a valid time")
+        vex.dialog.alert("Please enter a valid time");
+        return false;
     }
     return true;
 }
@@ -224,6 +225,8 @@ $("#addPickupGame").on("click", function(e) {
 
     // Uploads pickup data to the database
     pickupData.push(newPickup);
+} else {
+    return false;
 }
 
     // Logs everything to console
