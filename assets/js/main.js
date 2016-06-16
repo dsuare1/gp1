@@ -89,9 +89,12 @@ $(".dropdown-menu li a").on("click", function() {
 });
 
 // DATE-TIME PICKER
-$("#datetimepicker1").on("click", function() {
+// $("#datetimepicker1").on("click", function() {
+$(document).ready(function() {
     $('#datetimepicker1').datetimepicker();
-});
+
+})
+// });
 
 
 ///////////////////////////////////////////////////////////
