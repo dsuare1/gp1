@@ -41,9 +41,6 @@ body.createGame {
     background: rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     padding-bottom: 50px;
-
-    /*transform: translateY(50%);*/
-
 }
 
 #homeTitle {
@@ -62,108 +59,6 @@ body.createGame {
     line-height: 30px;
 }
 
-/*Hamburger Menu*/
-
-/*header {
-    width: 47px;
-    background: #1d1f20;
-    height: 50px;
-    line-height: 50px;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.hamburger {
-    background: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    line-height: 45px;
-    padding: 0px 15px 0px 15px;
-    color: #fff;
-    border: 0;
-    font-size: 1.4em;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    z-index: 10000000000000;
-}
-
-.cross {
-    background: none;
-    position: absolute;
-    top: 0px;
-    right: 0;
-    padding: 0px 15px 0px 15px;
-    color: #fff;
-    border: 0;
-    font-size: 3em;
-    line-height: 65px;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    z-index: 10000000000000;
-}
-
-.menu {
-    z-index: 1000000;
-    font-weight: bold;
-    font-size: 0.8em;
-    width: 33%;
-    background: #131313;
-    position: relative;
-    text-align: center;
-    float:right;
-}
-
-.menu ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    list-style-image: none;
-}
-
-.menu li {
-    display: block;
-    padding: 15px 0 15px 0;
-    border-bottom: #1d1f20 1px solid;
-}
-
-.menu li:hover {
-    display: block;
-    background: #181818;
-    padding: 15px 0 15px 0;
-    border-bottom: #1d1f20 1px solid;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    margin: 0px;
-    color: #fff;
-}
-
-.menu ul li a:hover {
-    color: #fff;
-    text-decoration: none;
-}
-
-.menu a {
-    text-decoration: none;
-    color: white;
-}
-
-.menu a:hover {
-    text-decoration: none;
-    color: white;
-}
-
-.glyphicon-home {
-    color: white;
-    font-size: 1.5em;
-    margin-top: 5px;
-    margin: 0 auto;
-}*/
 
 /***************************************************************/
 /*Navbar Styles*/
@@ -294,7 +189,8 @@ a:hover {
 /***************************************************************/
 
 .create-game-map,
-.find-game-map {
+.find-game-map,
+.show-game-map {
     border: 2px solid #000;
     border-radius: 2px;
 }
@@ -330,109 +226,6 @@ a:hover {
     margin: 10px;
 }
 
-/*Hamburger Menu*/
-
-/*header {
-    width: 47px;
-    background: #1d1f20;
-    height: 50px;
-    line-height: 50px;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.hamburger {
-    background: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    line-height: 45px;
-    padding: 0px 15px 0px 15px;
-    color: #fff;
-    border: 0;
-    font-size: 1.4em;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    z-index: 10000000000000;
-}
-
-.cross {
-    background: none;
-    position: absolute;
-    top: 0px;
-    right: 0;
-    padding: 0px 15px 0px 15px;
-    color: #fff;
-    border: 0;
-    font-size: 3em;
-    line-height: 65px;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    z-index: 10000000000000;
-}
-
-.menu {
-    z-index: 1000000;
-    font-weight: bold;
-    font-size: 0.8em;
-    width: 33%;
-    background: #131313;
-    position: relative;
-    text-align: center;
-    float:right;
-}
-
-.menu ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    list-style-image: none;
-}
-
-.menu li {
-    display: block;
-    padding: 15px 0 15px 0;
-    border-bottom: #1d1f20 1px solid;
-}
-
-.menu li:hover {
-    display: block;
-    background: #181818;
-    padding: 15px 0 15px 0;
-    border-bottom: #1d1f20 1px solid;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    margin: 0px;
-    color: #fff;
-}
-
-.menu ul li a:hover {
-    color: #fff;
-    text-decoration: none;
-}
-
-.menu a {
-    text-decoration: none;
-    color: white;
-}
-
-.menu a:hover {
-    text-decoration: none;
-    color: white;
-}
-
-.glyphicon-home {
-    color: white;
-    font-size: 1.5em;
-    margin-top: 5px;
-    margin: 0 auto;
-}
-*/
 
 /*Drop Down*/
 
@@ -464,7 +257,6 @@ a:hover {
     background: rgba(255, 255, 255, 0.5);
 }
 
-/* ADDED BY DERRICK 6-13-2016 */
 .form-control {
     text-align: center;
 }
@@ -486,30 +278,6 @@ a:hover {
 }
 
 
-/* ADDED BY DERRICK 6-13-2016 */
-
-/* STYLING THE DATEPICKER CALENDAR */
-/*.ui-datepicker {
-    background-color: #fff;
-    padding: 10px;
-}
-
-.ui-datepicker-prev {
-    float: left;
-}
-
-.ui-datepicker-next {
-    float: right;
-}
-
-.ui-datepicker-title {
-    margin-top: 10px;
-}
-
-.ui-datepicker-group {
-    display: inline-block;
-}*/
-
 /* MAP STYLES */
 #basketball-map,
 #soccer-map,
@@ -529,178 +297,28 @@ a:hover {
     margin-bottom: 22px;
 }
 
-/*Hamburger Menu*/
-
-/*header {
-    width: 47px;
-    background: #1d1f20;
-    height: 50px;
-    line-height: 50px;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.hamburger {
-    background: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    line-height: 45px;
-    padding: 0px 15px 0px 15px;
-    color: #fff;
-    border: 0;
-    font-size: 1.4em;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    z-index: 10000000000000;
-}
-
-.cross {
-    background: none;
-    position: absolute;
-    top: 0px;
-    right: 0;
-    padding: 0px 15px 0px 15px;
-    color: #fff;
-    border: 0;
-    font-size: 3em;
-    line-height: 65px;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    z-index: 10000000000000;
-}
-
-.menu {
-    z-index: 1000000;
-    font-weight: bold;
-    font-size: 0.8em;
-    width: 33%;
-    background: #131313;
-    position: absolute;
-    top: 0;
-    right: 0;
-    text-align: center;
-    float:right;
-}
-
-.menu ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    list-style-image: none;
-}
-
-.menu li {
-    display: block;
-    padding: 15px 0 15px 0;
-    border-bottom: #1d1f20 1px solid;
-}
-
-.menu li:hover {
-    display: block;
-    background: #181818;
-    padding: 15px 0 15px 0;
-    border-bottom: #1d1f20 1px solid;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    margin: 0px;
-    color: #fff;
-}
-
-.menu ul li a:hover {
-    color: #fff;
-    text-decoration: none;
-}
-
-.menu a {
-    text-decoration: none;
-    color: white;
-}
-
-.menu a:hover {
-    text-decoration: none;
-    color: white;
-}
-
-.glyphicon-home {
-    color: white;
-    font-size: 1.5em;
-    margin-top: 5px;
-    margin: 0 auto;
-}*/
-
-/*Drop Down*/
-
-/*.dropdown-menu{
-    width: 100%;
-
-}
-.btn{
-    width: 100%;
-}
-#dropdownMenu2{
-    margin-top: 20px;
-    margin-bottom: 20px; 
-}
-
-.panel-transparent{
-    background: none;
-}
-
-.panel-transparent {
-    background: rgba(255, 255, 255, 0.5);
-}
-
-.panel-transparent .panel-body {
-    background: rgba(255, 255, 255, 0.5);
-}*/
-
-/* ADDED BY DERRICK 6-13-2016 */
-.form-control {
-    text-align: center;
-}
-
-::-webkit-input-placeholder {
-  text-align: center;
-}
-
-:-moz-placeholder { /* Firefox 18- */
-  text-align: center;  
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-  text-align: center;  
-}
-
-:-ms-input-placeholder {  
-  text-align: center; 
-}
-
 
 /***************************************************************/
 /*Individual game holder for 'Find a game'*/
 /***************************************************************/
-#individual-game-holder {
-    width: 80%;
-    background-color: rgba(0, 0, 0, 0.1);
+.live-game {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+    border: 5px solid red;
 }
 
-#individual-game-holder h4, p {
-    display: inline-block;
+h4 {
+    margin: 0;
+    color: yellow;
 }
 
+p {
+    margin: 0;
+    color: #fff;
+    font-size: 2em;
+}
 
-
-
-
-
-
-
-
-
-
+#map-holder {
+    position: fixed;
+}

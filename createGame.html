@@ -25,30 +25,7 @@
 </head>
 
 <body class="createGame">
-
-    <!-- Hamburger Menu -->
-   <!--  <header>
-        <button class="hamburger">&#9776;</button>
-        <button class="cross">&#735;</button>
-    </header>
-    <div class="menu">
-        <ul>
-            <a href="#">
-                <li><strong>Login</strong></li>
-            </a>
-            <a href="#">
-                <li style="background-color: #a4a4a4;">Basketball</li>
-            </a>
-            <a href="#">
-                <li style="background-color: #a4a4a4">Soccer</li>
-            </a>
-            <a href="#">
-                <li style="background-color: #a4a4a4">Disc Golf</li>
-            </a>
-        </ul>
-    </div> -->
     <!-- LOGO -->
-
     <nav class="navbar navbar-default">
         <div class="container">
             <a href="index.html">
@@ -99,21 +76,6 @@
                                 </ul>
                             </div>
                         
-                        
-
-
-                        <!-- <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:100%;">
-                                Game Type
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <li class="sports-options"><a href="#">5 on 5(BasketBall)</a></li>
-                                <li class="sports-options"><a href="#">3 on 3(BasketBall)</a></li>
-                                <li class="sports-options"><a href="#">11 on 11(Soccer)</a></li>
-                            </ul>
-                        </div> -->
-                        
                             <div class="form-group">
                                 <input type="text" class="form-control" id="user-name-input" placeholder="Your Name">
                             </div>
@@ -123,15 +85,15 @@
                             </div>
                         
                             <div class="form-group">
-                                <input type="text" class="form-control" id="location-input" placeholder="Location">
+                                <input type="text" class="form-control" id="location-input" placeholder="Location (Address or Place)">
                             </div>
 
                             <div class="form-group">
-                                <input type="text" class="form-control" id="date-input" placeholder="MM/DD/YY 06/15/16">
+                                <input type="text" class="form-control" id="date-input" placeholder="MM-DD-YYYY (06-15-2016)">
                             </div>
                         
                             <div class="form-group">
-                                <input type="text" class="form-control" id="time-input" placeholder="Military 16:30">
+                                <input type="text" class="form-control" id="time-input" placeholder="Military (16:30)">
                             </div>
 
                             <button type="submit" class="btn btn-success" id="addPickupGame">Submit</button>
@@ -143,21 +105,21 @@
             <!-- MAP HOLDER -->
             <div class="col-lg-5">
                 <div id="map-holder">
-                    <iframe class="visible create-game-map" id="init-map" width="100%" height="440" frameborder="0" src="https://www.google.com/maps/embed/v1/view?zoom=10&amp;center=30.2672%2C-97.7431&amp;key=AIzaSyDchdsjpvalXui_QTAFtm9Hb1Ka67X5s1k"></iframe>
+                    <iframe class="visible create-game-map" id="init-map" width="458" height="440" frameborder="0" src="https://www.google.com/maps/embed/v1/view?zoom=10&amp;center=30.2672%2C-97.7431&amp;key=AIzaSyDchdsjpvalXui_QTAFtm9Hb1Ka67X5s1k"></iframe>
 
                     <!-- BASKETBALL MAP -->
-                    <iframe class="hidden create-game-map" id="basketball-map" width='100%' height='440' frameborder='0' src='https://www.google.com/maps/embed/v1/search?q=basketball+court&amp;center=30.2672%2C-97.7431&amp;zoom=10&amp;key=AIzaSyDchdsjpvalXui_QTAFtm9Hb1Ka67X5s1k'></iframe>
+                    <iframe class="hidden create-game-map" id="basketball-map" width='458' height='440' frameborder='0' src='https://www.google.com/maps/embed/v1/search?q=basketball+court&amp;center=30.2672%2C-97.7431&amp;zoom=10&amp;key=AIzaSyDchdsjpvalXui_QTAFtm9Hb1Ka67X5s1k'></iframe>
 
                     <!-- SOCCER MAP -->
-                    <iframe class="hidden create-game-map" id="soccer-map" width='100%' height='440' frameborder='0' src='https://www.google.com/maps/embed/v1/search?q=soccer&amp;center=30.2672%2C-97.7431&amp;zoom=10&amp;key=AIzaSyDchdsjpvalXui_QTAFtm9Hb1Ka67X5s1k'></iframe>
+                    <iframe class="hidden create-game-map" id="soccer-map" width='458' height='440' frameborder='0' src='https://www.google.com/maps/embed/v1/search?q=soccer&amp;center=30.2672%2C-97.7431&amp;zoom=10&amp;key=AIzaSyDchdsjpvalXui_QTAFtm9Hb1Ka67X5s1k'></iframe>
 
                     <!-- DISC GOLF MAP -->
-                    <iframe class="hidden create-game-map" id="disc-golf-map" width='100%' height='440' frameborder='0' src='https://www.google.com/maps/embed/v1/search?q=disc+golf&amp;center=30.2672%2C-97.7431&amp;zoom=10&amp;key=AIzaSyDchdsjpvalXui_QTAFtm9Hb1Ka67X5s1k'></iframe>
+                    <iframe class="hidden create-game-map" id="disc-golf-map" width='458' height='440' frameborder='0' src='https://www.google.com/maps/embed/v1/search?q=disc+golf&amp;center=30.2672%2C-97.7431&amp;zoom=10&amp;key=AIzaSyDchdsjpvalXui_QTAFtm9Hb1Ka67X5s1k'></iframe>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="text-center" id="weather-info-div">
-                    <h4>Current Weather conditions for Austin, TX:</h4>
+                    <h3>Current Weather conditions for Austin, TX:</h4>
                     <div class="weather-data">Overall Weather:
                         <div id="weather"></div>
                     </div>

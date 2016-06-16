@@ -2,7 +2,6 @@
 // CLICK LISTENERS
 ///////////////////////////////////////////////////////////
 
-
 ///////// 'createGame.html' FORM /////////
 
 $(".dropdown-menu li a").on("click", function() {
@@ -53,6 +52,14 @@ $(".dropdown-menu li a").on("click", function() {
 ////////////////////////////////////
 // VALIDATION FUNCTIONS
 ////////////////////////////////////
+function checkGameType(pickupGameType) {
+    if (pickupGameType === undefined) {
+        vex.dialog.alert("Please select a game type");
+        return false;
+    }
+    return true;
+}
+
 function checkUserName(pickupUserName) {
     // regular expression to match required user name format
     re = /[a-z]\w+/gi;
@@ -86,7 +93,7 @@ function checkLocation(pickupLocation) {
 
 function checkDate(pickupDate) {
     // regular expression to match required date format
-    re = /^([0-1]?[0-9]|2[0-3])(:[0-5][0-9])?$/;
+    re = /((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2})*/;
 
     if (pickupDate !== '' && !pickupDate.match(re)) {
         vex.dialog.alert("Please enter a valid date");
@@ -108,18 +115,14 @@ function checkTime(pickupTime) {
 
 ///////// 'findGame.html' CHILDREN ADDED FROM FIREBASE /////////
 
-$("#individual-game-holder").on("click", function() {
-    var location = $("#game-location").text();
-
-    console.log(location);
+$(".active-games").on("click", "#game-location", function() {
+    var location = $(this).attr("data-location");
 
     location = encodeURIComponent(location.trim());
 
-    console.log(location);
-
     $(".find-game-map").removeClass("visible").addClass("hidden");
 
-    $("#map-holder").html("<iframe class='visible' width='100%' height='440' frameborder='0' src='https://www.google.com/maps/embed/v1/search?q=" + location + "&amp;center=30.2672%2C-97.7431&amp;zoom=10&amp;key=AIzaSyDchdsjpvalXui_QTAFtm9Hb1Ka67X5s1k'></iframe>");
+    $("#map-holder").html("<iframe class='visible show-game-map' width='458' height='440' frameborder='0' src='https://www.google.com/maps/embed/v1/search?q=" + location + "&amp;center=30.2672%2C-97.7431&amp;zoom=10&amp;key=AIzaSyDchdsjpvalXui_QTAFtm9Hb1Ka67X5s1k'></iframe>");
 });
 
 
@@ -161,40 +164,18 @@ $.ajax({ url: queryURL, method: 'GET' }).done(function(response) {
 
 });
 
-// Scroll the weather warning across the 'weather-scroll-div'
-// var marquee = $("#weather-scroll-div");
-// marquee.each(function() {
-//     var mar = $(this),indent = mar.width();
-//     mar.marquee = function() {
-//         indent--;
-//         mar.css("text-indent",indent);
-//         if (indent < -1 * mar.children("#weather-scroll-div").width()) {
-//             indent = mar.width();
-//         }
-//     };
-//     mar.data('interval',setInterval(mar.marquee,1000/80));
-// });
-
 
 ///////////////////////////////////////////////////////////
 // FIREBASE
 ///////////////////////////////////////////////////////////
 
-// Create a Pickup Game
-// In Firebase 
-//  -Set Location
-//  -Set Sport
-//  -Set Members
-//  -set Date/Time
-//  ?-set Frequency daily, weekly, monthly
-
-// 1. Link to Firebase
+// Link to Firebase
 var pickupData = new Firebase("https://pkupgames.firebaseio.com/");
 
-// 2. Button for adding pickupGame
+// Button for adding pickupGame
 $("#addPickupGame").on("click", function(e) {
 
-    if (($("#user-name-input").val() == "") || ($("#game-name-input").val() == "") || ($("#location-input").val() == "") || ($("#date-input").val()) == "" || ($("#time-input").val() == "" )) {
+    if ($("#dropdownMenu1").val() = "" || ($("#user-name-input").val() == "") || ($("#game-name-input").val() == "") || ($("#location-input").val() == "") || ($("#date-input").val()) == "" || ($("#time-input").val() == "" )) {
             vex.dialog.alert("Please enter the necessary information into the form");
             return false;
         };
@@ -213,7 +194,7 @@ $("#addPickupGame").on("click", function(e) {
 
     // Creates local "temporary" object for holding pickup data
 
-    if (checkUserName(pickupUserName) && checkGameName(pickupGameName) && checkLocation(pickupLocation) && checkDate(pickupDate) && checkTime(pickupTime)) {
+    if (checkGameType(pickupGameType) && checkUserName(pickupUserName) && checkGameName(pickupGameName) && checkLocation(pickupLocation) && checkDate(pickupDate) && checkTime(pickupTime)) {
         var newPickup = {
             type: pickupGameType,
             userName: pickupUserName,
@@ -238,7 +219,7 @@ $("#addPickupGame").on("click", function(e) {
     console.log(newPickup.time);
 
     // Clears all of the text-boxes
-    $("#dropdownMenu1").val("Sport & Game Type" + "<span class='caret'></span>");
+    $("#dropdownMenu1").html("Sport & Game Type" + "<span class='caret'></span>");
     $("#user-name-input").val("");
     $("#game-name-input").val("");
     $("#location-input").val("");
@@ -253,34 +234,13 @@ pickupData.on("child_added", function(childSnapshot, prevChildKey) {
     console.log(childSnapshot.val());
 
     // Grabs user input
-    var pickupGameType = $("#dropdownMenu1").val().trim();
-    var pickupUserName = $("#user-name-input").val().trim();
-    var pickupGameName = $("#game-name-input").val().trim();
-    var pickupLocation = $("#location-input").val().trim();
-    var pickupDate = $("#date-input").val().trim();
-    var pickupTime = $("#time-input").val().trim();
+    var pickupGameType = childSnapshot.val().type;
+    var pickupUserName = childSnapshot.val().userName;
+    var pickupGameName = childSnapshot.val().gameName;
+    var pickupLocation = childSnapshot.val().location;
+    var pickupDate = childSnapshot.val().date;
+    var pickupTime = childSnapshot.val().time;
 
-    $(".active-games").append("<h4>Game type:</h4><p id='game-type'>" + pickupGameType + "</p><br><h4>Created by:</h4><p id='created-by'>" + pickupUserName + "</p><br><h4>Game name:</h4><p id='game-name'>" + pickupGameName + "</p><br><h4>Location:</h4><p id='game-location'>" + pickupLocation + "</p><br><h4>Date:</h4><p id='game-date'>" + pickupDate + "</p><br><h4>Time</h4><p id='game-time'>" + pickupTime + "</p>");
-
-    // // Prettify the pickup Time
-    // var pickupTimePretty = moment.unix(pickupTime).format("MM/DD/YY");
-    // // Calculate the months worked using hardconre math
-    // // To calculate the months worked
-    // var pickupMonths = moment().diff(moment.unix(pickupTime, 'X'), "months");
-    // console.log(pickupMonths);
-
-    // // Calculate the total billed freq
-    // var pickupBilled = pickupMonths * pickupFreq;
-    // console.log(pickupBilled);
-
-    // Calculate the time when Next pickup Arrives
-    // var pickupNextArr;
-
-    // Calculate the time remaining until Next pickup Arrives
-    // var pickupMinsAway;
-
-    // Add each pickup's data into the table
-    //$("#pickupTable > tbody").append("<tr><td>" + pickupTitle + "</td><td>" + pickupLoc + "</td><td>" + pickupTimePretty + "</td><td>" + pickupMonths + "</td><td>" + pickupFreq + "</td><td>");
-    // $("#pickupTable > tbody").append("<tr><td>" + pickupTitle + "</td><td>" + pickupLoc + "</td><td>" + pickupFreq + "</td><td>" + pickupNextArr + "</td><td>" + pickupMinsAway + "</td><td>");
+    $(".active-games").append("<div class='live-game'><h4>Game type:</h4><p id='game-type'>" + pickupGameType + "</p><br><h4>Created by:</h4><p id='created-by'>" + pickupUserName + "</p><br><h4>Game name:</h4><p id='game-name'>" + pickupGameName + "</p><br><h4>Location:</h4><p id='game-location' data-location='" + pickupLocation + "'>" + pickupLocation + "</p><br><h4>Date:</h4><p id='game-date'>" + pickupDate + "</p><br><h4>Time</h4><p id='game-time'>" + pickupTime + "</p></div>");
 
 });
