@@ -2,51 +2,59 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <title>PickUp</title>
+
+    <!-- FONTS -->
     <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
+    
+    <!-- BOOTSTRAP Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    
+    <!-- AUTHOR STYLESHEET -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 </head>
 
 <body class="landing-page">
-    <!-- Hamburger Menu -->
-    <header>
-        <button class="hamburger">&#9776;</button>
-        <button class="cross">&#735;</button>
-    </header>
-    <div class="menu">
-        <ul>
-            <a href="#">
-                <li><strong>Login</strong></li>
-            </a>
-            <a href="#">
-                <li style="background-color: #a4a4a4;">Basketball</li>
-            </a>
-            <a href="#">
-                <li style="background-color: #a4a4a4">Soccer</li>
-            </a>
-            <a href="#">
-                <li style="background-color: #a4a4a4">Disc Golf</li>
-            </a>
-        </ul>
-    </div>
     <!-- Main Text -->
     <div id="homeTextContainer">
         <h1 id="homeTitle">pickup</h1>
         <h4 id="homeTagline">"no scrubs allowed"</h4>
         <!-- Buttons -->
-        <button class="button createGameBtn" type="button">Create A Game</button>
-        <button class="button findGameBtn" type="button">Find A Game</button>
+        <a href="createGame.html">
+            <button class="button createGameBtn" type="button">Create A Game</button>
+        </a>
+        <a href="findGame.html">
+            <button class="button findGameBtn" type="button">Find A Game</button>
+        </a>
     </div>
     <!-- Sticky Footer -->
-    <!-- <div class="footer">&copy; 2016 Derrick Suarez, Jimmie Jackson, Ben Arteaga, Royce Ching </div> -->
+
+    <div class="footer">&copy; 2016 Derrick Suarez, Jimmie Jackson, Ben Arteaga, Royce Ching </div>
+    
     <!--  Latest compiled and minified jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    
+    <!-- Latest compiled and minified BOOTSTRAP JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- AUTHOR-CREATED HAMBURGER JS -->
     <script type="text/javascript" src="assets/js/hamburger.js"></script>
+    
+    <!-- AUTHOR CREATED MAIN JS -->
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
     <!-- Firebase Reference -->
     <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+    
+    <!-- BOOTSTRAP date time picker JS -->
+    <script src="assets/bs-date-time-picker/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- MOMENT JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
 </body>
 
 </html>

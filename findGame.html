@@ -3,16 +3,67 @@
 
 <head>
     <title>Find Game</title>
+    <!-- FONTS -->
     <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
+    <!-- BOOTSTRAP Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- BOOTSTRAP date and time picker CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/bs-date-time-picker/css/bootstrap-datetimepicker.min.css">
+    <!-- AUTHOR STYLESHEET -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Firebase Reference -->
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
 </head>
 
 <body class="findGameBody">
-	<div id="logo">pickup</div>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <a href="index.html">
+                <div id="logo">pickup</div>
+            </a>
+            <ul class="nav navbar-nav navbar-right">
+        		<li><a href="createGame.html" class="navbar-link-author">Create Game</a></li>
+        		<li class="active"><a href="#" class="navbar-link-author">Find Game<span class="sr-only">(current)</span></a></li>
+        	</ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="panel panel-default panel-transparent">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Current games registered on &copy;PickUp:</h3>
+                    </div>
+                    <div class="panel-body">
+                    	<div class="active-games">
+                    	</div>
+                    </div>
+                </div>
+            </div>
+            <!-- MAP HOLDER -->
+            <div class="col-lg-5">
+                <div id="map-holder">
+                    <iframe class="visible find-game-map" id="init-map" width="458" height="450" frameborder="0" src="https://www.google.com/maps/embed/v1/view?zoom=10&amp;center=30.2672%2C-97.7431&amp;key=AIzaSyBYNfzV85uLn4SDjRB65-rp1nTAtWwc-Jo"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 
+   <!--  <div class="footer">&copy; 2016 Derrick Suarez, Jimmie Jackson, Ben Arteaga, Royce Ching </div> -->
 
+    <!--  Latest compiled and minified jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <!-- Latest compiled and minified BOOTSTRAP JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- AUTHOR-CREATED HAMBURGER JS -->
+    <script type="text/javascript" src="assets/js/hamburger.js"></script>
+    <!-- AUTHOR CREATED MAIN JS -->
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <!-- BOOTSTRAP date time picker JS -->
+    <script src="assets/bs-date-time-picker/js/bootstrap-datetimepicker.min.js"></script>
+    <!-- MOMENT JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
 </body>
 
 </html>
