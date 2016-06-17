@@ -175,7 +175,7 @@ var pickupData = new Firebase("https://pkupgames.firebaseio.com/");
 // Button for adding pickupGame
 $("#addPickupGame").on("click", function(e) {
 
-    if ($("#dropdownMenu1").val() = "" || ($("#user-name-input").val() == "") || ($("#game-name-input").val() == "") || ($("#location-input").val() == "") || ($("#date-input").val()) == "" || ($("#time-input").val() == "" )) {
+    if  (($("#user-name-input").val() == "") || ($("#game-name-input").val() == "") || ($("#location-input").val() == "") || ($("#date-input").val() == "") || ($("#time-input").val() == "")) {
             vex.dialog.alert("Please enter the necessary information into the form");
             return false;
         };

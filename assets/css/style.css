@@ -188,12 +188,12 @@ a:hover {
 /*Create Game styles*/
 /***************************************************************/
 
-.create-game-map,
+/*.create-game-map,
 .find-game-map,
 .show-game-map {
     border: 2px solid #000;
     border-radius: 2px;
-}
+}*/
 
 #temp-warning,
 #wind-warning {
