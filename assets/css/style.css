@@ -314,18 +314,18 @@ a:active {
 
 
 /***************************************************************/
-/*Individual game holder for 'Find a game'*/
+/*Styling to The Games on the Page*/
 /***************************************************************/
 .live-game {
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
     margin-bottom: 10px;
-    border: 5px solid red;
+    border: solid grey;
 }
 
-h4 {
+.active-games h4 {
     margin: 0;
-    color: yellow;
+    color: grey;
+
 }
 
 p {
@@ -337,6 +337,9 @@ p {
 #map-holder {
     position: fixed;
 }
+ .live-game:hover{
+    background-color: black;
+ }
 
 /*ADDED SOME STYLING TO MAKE IT MATCH*/
 
