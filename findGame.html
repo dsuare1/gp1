@@ -49,7 +49,6 @@
             </div>
         </div>
     </div>
-    <!--  <div class="footer">&copy; 2016 Derrick Suarez, Jimmie Jackson, Ben Arteaga, Royce Ching </div> -->
     <!--  Latest compiled and minified jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
     <!-- Latest compiled and minified BOOTSTRAP JS -->
@@ -62,6 +61,18 @@
     <script src="assets/bs-date-time-picker/js/bootstrap-datetimepicker.min.js"></script>
     <!-- MOMENT JS -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <!-- VEX MODALS -->
+    <script src="assets/js/vex.combined.min.js"></script>
+    <script>
+    vex.defaultOptions.className = 'vex-theme-os';
+    </script>
+    <link rel="stylesheet" href="assets/css/vex.css" />
+    <link rel="stylesheet" href="assets/css/vex-theme-os.css" />
+    <script>
+    $(window).load(function() {
+        vex.dialog.alert("Click on the location for any game to see a pin on the map.");
+    });
+    </script>
    
 </body>
 
