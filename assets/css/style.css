@@ -147,7 +147,7 @@ a:active {
 /*Footer*/
 /***************************************************************/
 .footer {
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
@@ -157,41 +157,6 @@ a:active {
     text-align: center;
     font-size:0.7em;
     height: 33px;
-}
-
-/***************************************************************/
-/*Media Queries*/
-/***************************************************************/
-@media screen and (max-width:970px){
-    #homeTitle{
-        font-size: 10em;
-    }
-}
-
-@media screen and (max-width:686px){
-    #homeTitle{
-        font-size: 8.5em;
-    }
-    #homeTagline{
-        font-size: 2em;
-    }
-}
-
-@media screen and (max-width:500px){
-    #homeTitle{
-        font-size: 7em;
-    }
-    #homeTagline{
-        font-size: 2em;
-    }
-}
-@media screen and (max-width:476px){
-    #homeTitle{
-        font-size: 5em;
-    }
-    #homeTagline{
-        font-size: 2em;
-    }
 }
 
 /***************************************************************/
@@ -360,3 +325,63 @@ a:active {
     background-color: #333;
     color: white;
  }
+
+ /***************************************************************/
+/*Media Queries*/
+/***************************************************************/
+@media screen and (max-width:1199px){
+    #map-holder {
+        position: relative;
+        margin-bottom: 15px;
+        margin-left: 240px;
+    }
+
+    #wind-warning,
+    #temp-warning {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width:991px){
+    #map-holder {
+        margin-left: 10px;
+        float: right;
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:970px){
+    #homeTitle {
+        font-size: 10em;
+    }
+    #map-holder {
+        position: relative;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width:686px){
+    #homeTitle {
+        font-size: 8.5em;
+    }
+    #homeTagline{
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width:500px){
+    #homeTitle {
+        font-size: 7em;
+    }
+    #homeTagline {
+        font-size: 2em;
+    }
+}
+@media screen and (max-width:476px){
+    #homeTitle {
+        font-size: 5em;
+    }
+    #homeTagline {
+        font-size: 2em;
+    }
+}
