@@ -7,7 +7,6 @@ body.landing-page {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    ;
 }
 
 body.findGameBody {
@@ -148,16 +147,16 @@ a:active {
 /*Footer*/
 /***************************************************************/
 .footer {
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.8);
-    color:white;
+    color: white;
     text-align: center;
     font-size:0.7em;
-
+    height: 33px;
 }
 
 /***************************************************************/
@@ -173,7 +172,7 @@ a:active {
     #homeTitle{
         font-size: 8.5em;
     }
-      #homeTagline{
+    #homeTagline{
         font-size: 2em;
     }
 }
