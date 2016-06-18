@@ -1,7 +1,6 @@
 /***************************************************************/
 /*Body Stylings*/
 /***************************************************************/
-
 body.landing-page {
     background: url(../images/basketballBG.jpg)no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -100,11 +99,9 @@ a:active {
 }
 
 
-
 /***************************************************************/
 /*Buttons*/
 /***************************************************************/
-
 .button {
     /*background-color: #4CAF50; /* Green */
     border: none;
@@ -150,7 +147,6 @@ a:active {
 /***************************************************************/
 /*Footer*/
 /***************************************************************/
-
 .footer {
     position: absolute;
     right: 0;
@@ -167,7 +163,6 @@ a:active {
 /***************************************************************/
 /*Media Queries*/
 /***************************************************************/
-
 @media screen and (max-width:970px){
     #homeTitle{
         font-size: 10em;
@@ -203,14 +198,6 @@ a:active {
 /***************************************************************/
 /*Create Game styles*/
 /***************************************************************/
-
-.create-game-map,
-.find-game-map,
-.show-game-map {
-    border: 2px solid #000;
-    border-radius: 2px;
-}
-
 #temp-warning,
 #wind-warning {
     font-size: 1.5em;
@@ -314,28 +301,43 @@ a:active {
 
 
 /***************************************************************/
-/*Individual game holder for 'Find a game'*/
+/*Styling to The Games on the Page*/
 /***************************************************************/
 .live-game {
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    padding: 16px;
     margin-bottom: 10px;
-    border: 5px solid red;
+    border: solid grey;
+    overflow: hidden;
 }
 
-h4 {
+.active-games h4 {
     margin: 0;
-    color: yellow;
+    color: grey;
+    font-size: 1em;
 }
 
-p {
+.active-games p {
     margin: 0;
     color: #fff;
-    font-size: 2em;
+    font-size: 1.2em;
+    margin-bottom: -10px;
 }
 
 #map-holder {
     position: fixed;
+}
+
+.live-game:hover{
+    background-color: black;
+}
+
+.game-location {
+    white-space: nowrap;
+}
+
+.game-location:hover {
+    color: #5a4dd5;
+    cursor: pointer;
 }
 
 /*ADDED SOME STYLING TO MAKE IT MATCH*/

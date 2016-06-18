@@ -50,10 +50,10 @@ $(".dropdown-menu li a").on("click", function() {
 });
 
 ////////////////////////////////////
-// VALIDATION FUNCTIONS
+// FORM VALIDATION FUNCTIONS
 ////////////////////////////////////
 function checkGameType(pickupGameType) {
-    if (pickupGameType === undefined) {
+    if (pickupGameType === "") {
         vex.dialog.alert("Please select a game type");
         return false;
     }
@@ -93,7 +93,7 @@ function checkLocation(pickupLocation) {
 
 function checkDate(pickupDate) {
     // regular expression to match required date format
-    re = /((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2})*/;
+    re = /^[01]?[0-9]\/[0-3]?[0-9]\/[12][90][0-9][0-9]$/;
 
     if (pickupDate !== '' && !pickupDate.match(re)) {
         vex.dialog.alert("Please enter a valid date");
@@ -115,22 +115,16 @@ function checkTime(pickupTime) {
 
 ///////// 'findGame.html' CHILDREN ADDED FROM FIREBASE /////////
 
-$(".active-games").on("click", "#game-location", function() {
+$(".active-games").on("click", ".game-location", function() {
     var location = $(this).attr("data-location");
-
     location = encodeURIComponent(location.trim());
-
     $(".find-game-map").removeClass("visible").addClass("hidden");
-
     $("#map-holder").html("<iframe class='visible show-game-map' width='458' height='440' frameborder='0' src='https://www.google.com/maps/embed/v1/search?q=" + location + "&amp;center=30.2672%2C-97.7431&amp;zoom=10&amp;key=AIzaSyDchdsjpvalXui_QTAFtm9Hb1Ka67X5s1k'></iframe>");
 });
-
-
 
 ///////////////////////////////////////////////////////////
 // AJAX CALLS
 ///////////////////////////////////////////////////////////
-
 
 ///////// WEATHER UNDERGROUND /////////
 
@@ -139,11 +133,8 @@ var APIKey = "d4bcc2842a7e6378";
 
 var queryURL = "http://api.wunderground.com/api/" + APIKey + "/geolookup/conditions/q/TX/Austin.json";
 
-// Here we run our AJAX call to the OpenWeatherMap API
+// AJAX call for weather
 $.ajax({ url: queryURL, method: 'GET' }).done(function(response) {
-
-    // Log the resulting object
-    // console.log(response);
 
     if (response.current_observation.feelslike_f > 85) {
         $("#temp-warning").html("Looks like it's pretty hot outside.  You may want to consider looking for places to play inside.");
@@ -165,7 +156,6 @@ $.ajax({ url: queryURL, method: 'GET' }).done(function(response) {
 
 });
 
-
 ///////////////////////////////////////////////////////////
 // FIREBASE
 ///////////////////////////////////////////////////////////
@@ -176,24 +166,21 @@ var pickupData = new Firebase("https://pkupgames.firebaseio.com/");
 // Button for adding pickupGame
 $("#addPickupGame").on("click", function(e) {
 
+    // prevents reloading of page
+    e.preventDefault();
+
     if  (($("#user-name-input").val() == "") || ($("#game-name-input").val() == "") || ($("#location-input").val() == "") || ($("#date-input").val() == "") || ($("#time-input").val() == "")) {
             vex.dialog.alert("Please enter the necessary information into the form");
             return false;
         };
 
-    // prevents reloading of page
-    e.preventDefault();
-
     // Grabs user input
     var pickupGameType = $("#dropdownMenu1").val().trim();
-    console.log(pickupGameType);
     var pickupUserName = $("#user-name-input").val().trim();
     var pickupGameName = $("#game-name-input").val().trim();
     var pickupLocation = $("#location-input").val().trim();
     var pickupDate = $("#date-input").val().trim();
     var pickupTime = $("#time-input").val().trim();
-
-    // Creates local "temporary" object for holding pickup data
 
     if (checkGameType(pickupGameType) && checkUserName(pickupUserName) && checkGameName(pickupGameName) && checkLocation(pickupLocation) && checkDate(pickupDate) && checkTime(pickupTime)) {
         var newPickup = {
@@ -205,21 +192,13 @@ $("#addPickupGame").on("click", function(e) {
             time: pickupTime
         }
 
-    // Uploads pickup data to the database
-    pickupData.push(newPickup);
-} else {
-    return false;
-}
+        pickupData.push(newPickup);
 
-    // Logs everything to console
-    console.log(newPickup.type);
-    console.log(newPickup.userName);
-    console.log(newPickup.gameName);
-    console.log(newPickup.location);
-    console.log(newPickup.date);
-    console.log(newPickup.time);
+    } else {
+        return false;
+    }
 
-    // Clears all of the text-boxes
+    // Clears all of the input fields
     $("#dropdownMenu1").html("Sport & Game Type" + "<span class='caret'></span>");
     $("#user-name-input").val("");
     $("#game-name-input").val("");
@@ -227,14 +206,14 @@ $("#addPickupGame").on("click", function(e) {
     $("#date-input").val("");
     $("#time-input").val("");
 
+    // Success message
+    vex.dialog.alert("Your game was successfully added to our database!  Check the 'Find Game' page to see your game.");
+
 });
 
 
 pickupData.on("child_added", function(childSnapshot, prevChildKey) {
 
-    console.log(childSnapshot.val());
-
-    // Grabs user input
     var pickupGameType = childSnapshot.val().type;
     var pickupUserName = childSnapshot.val().userName;
     var pickupGameName = childSnapshot.val().gameName;
@@ -242,6 +221,6 @@ pickupData.on("child_added", function(childSnapshot, prevChildKey) {
     var pickupDate = childSnapshot.val().date;
     var pickupTime = childSnapshot.val().time;
 
-    $(".active-games").append("<div class='live-game'><h4>Game type:</h4><p id='game-type'>" + pickupGameType + "</p><br><h4>Created by:</h4><p id='created-by'>" + pickupUserName + "</p><br><h4>Game name:</h4><p id='game-name'>" + pickupGameName + "</p><br><h4>Location:</h4><p id='game-location' data-location='" + pickupLocation + "'>" + pickupLocation + "</p><br><h4>Date:</h4><p id='game-date'>" + pickupDate + "</p><br><h4>Time</h4><p id='game-time'>" + pickupTime + "</p></div>");
+    $(".active-games").append("<div class='live-game'><h4>Game type:</h4><p class='game-type'>" + pickupGameType + "</p><br><h4>Created by:</h4><p class='created-by'>" + pickupUserName + "</p><br><h4>Game name:</h4><p class='game-name'>" + pickupGameName + "</p><br><h4>Location:</h4><p class='game-location' data-location='" + pickupLocation + "'>" + pickupLocation + "</p><br><h4>Date:</h4><p class='game-date'>" + pickupDate + "</p><br><h4>Time</h4><p class='game-time'>" + pickupTime + "</p></div>");
 
 });
