@@ -221,6 +221,6 @@ pickupData.on("child_added", function(childSnapshot, prevChildKey) {
     var pickupDate = childSnapshot.val().date;
     var pickupTime = childSnapshot.val().time;
 
-    $(".active-games").append("<div class='live-game'><h4>Game type:</h4><p class='game-type'>" + pickupGameType + "</p><br><h4>Created by:</h4><p class='created-by'>" + pickupUserName + "</p><br><h4>Game name:</h4><p class='game-name'>" + pickupGameName + "</p><br><h4>Location:</h4><p class='game-location' data-location='" + pickupLocation + "'>" + pickupLocation + "</p><br><h4>Date:</h4><p class='game-date'>" + pickupDate + "</p><br><h4>Time</h4><p class='game-time'>" + pickupTime + "</p></div>");
+    $(".active-games").prepend("<div class='live-game'><h4>Game type:</h4><p class='game-type'>" + pickupGameType + "</p><br><h4>Created by:</h4><p class='created-by'>" + pickupUserName + "</p><br><h4>Game name:</h4><p class='game-name'>" + pickupGameName + "</p><br><h4>Location:</h4><p class='game-location' data-location='" + pickupLocation + "'>" + pickupLocation + "</p><br><h4>Date:</h4><p class='game-date'>" + pickupDate + "</p><br><h4>Time</h4><p class='game-time'>" + pickupTime + "</p></div>");
 
 });
